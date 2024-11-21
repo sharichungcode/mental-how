@@ -12,17 +12,105 @@
 </head>
 <body>
 
-    <main>
-        <container>
-            <row>
-                <h1>Mind Balancer</h1>
-                <p>Your Journey to Mental Well-being Begins Here.</p>
-                    <p>First, take your daily dose of positivity and empowerment:</p>
-            </row>
-        </container>
+    <main class="d-flex justify-content-center align-items-center min-vh-100">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="display-3 mb-4 text-primary">Mind Balancer</h1>
+                <p class="lead text-muted">Your daily dose of positivity and empowerment.</p>
+                <p class="h4 text-secondary mb-4">Tap below for your affirmation today:</p>
+            </div>
+
+            <!-- Affirmation Card -->
+            <div class="col-12">
+            <div class="card mb-4 shadow-lg" id="affirmation-card">
+                <div class="card-header text-center">
+                    <div class="img-thumbnail mx-auto d-block" id="icon" style="width: 70px; height: 70px;"></div>
+                </div>
+                <div class="card-body">
+                    <p class="h5 font-weight-bold" id="affirmation">Loading an affirmation...</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <button class="btn btn-outline-primary btn-lg w-100" onclick="pickRandomAffirmation()">Pick Another</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <button class="btn btn-success btn-lg w-100">Continue</button>
+                </div>
+            </div>
+        </div>
+        </div>
     </main>
     
 <!-- Bootstrap Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Random Affirmation Javascript -->
+    <script>
+        const affirmations = [
+            {
+                text: "I am confident and capable.",
+                icon: "https://img.icons8.com/ios/50/000000/confidence.png",
+                bgColor: "#FFCC00",
+                bgImage: "https://images.unsplash.com/photo-1601758007465-c7e9cd84a6d7?fit=crop&w=500&h=500&q=80"
+            },
+            {
+                text: "I am worthy of all the good things that come my way.",
+                icon: "https://img.icons8.com/ios/50/000000/star.png",
+                bgColor: "#00CC99",
+                bgImage: "https://images.unsplash.com/photo-1470186954910-09cc8d5079b9?fit=crop&w=500&h=500&q=80"
+            },
+            {
+                text: "I choose happiness and peace every day.",
+                icon: "https://img.icons8.com/ios/50/000000/heart.png",
+                bgColor: "#FF6347",
+                bgImage: "https://images.unsplash.com/photo-1484239179165-b7a7f41f5993?fit=crop&w=500&h=500&q=80"
+            },
+            {
+                text: "I am grateful for all that I have and all that is yet to come.",
+                icon: "https://img.icons8.com/ios/50/000000/thank-you.png",
+                bgColor: "#FF8C00",
+                bgImage: "https://images.unsplash.com/photo-1501594907353-e6b564034dc7?fit=crop&w=500&h=500&q=80"
+            },
+            {
+                text: "I am constantly growing and evolving into a better version of myself.",
+                icon: "https://img.icons8.com/ios/50/000000/growth.png",
+                bgColor: "#6A5ACD",
+                bgImage: "https://images.unsplash.com/photo-1560525663-b03ca5e42cc2?fit=crop&w=500&h=500&q=80"
+            },
+            {
+                text: "I am in control of my thoughts and actions.",
+                icon: "https://img.icons8.com/ios/50/000000/brain.png",
+                bgColor: "#32CD32",
+                bgImage: "https://images.unsplash.com/photo-1497062106349-0d3c842de0bc?fit=crop&w=500&h=500&q=80"
+            }
+        ];
+
+        function pickRandomAffirmation() {
+            const randomIndex = Math.floor(Math.random() * affirmations.length);
+            const affirmationData = affirmations[randomIndex];
+
+            // Set affirmation text
+            document.getElementById("affirmation").textContent = affirmationData.text;
+
+            // Set background color
+            document.getElementById("affirmation-card").style.backgroundColor = affirmationData.bgColor;
+            document.getElementById("affirmation-card").style.backgroundImage = `url(${affirmationData.bgImage})`;
+            document.getElementById("affirmation-card").style.backgroundSize = 'cover';
+            document.getElementById("affirmation-card").style.backgroundPosition = 'center';
+
+            // Set icon
+            document.getElementById("icon").style.backgroundImage = `url(${affirmationData.icon})`;
+            document.getElementById("icon").style.backgroundSize = "contain";
+            document.getElementById("icon").style.backgroundRepeat = "no-repeat";
+        }
+
+        // Pick a random affirmation on page load
+        window.onload = pickRandomAffirmation;
+    </script>
 </body>
 </html>
