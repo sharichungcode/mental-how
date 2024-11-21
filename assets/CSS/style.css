@@ -1,0 +1,113 @@
+/* Root Settings */
+:root {
+    /* Typography */
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-family-secondary: 'Open Sans', sans-serif;
+    --font-size-base: 1rem; /* Default text size */
+    --line-height-base: 1.5; /* Default line height */
+    --heading-font-weight: 700; /* Bold weight for headings */
+    --body-font-weight: 400; /* Regular weight for body text */
+
+    /* Colors */
+    --primary-color: #6c94c9; /* Calming blue (for links, buttons) */
+    --secondary-color: #88b7a1; /* Calming green (for backgrounds, highlights) */
+    --background-color: #f4f7fb; /* Light background color */
+    --card-bg-color: #ffffff; /* White for card backgrounds */
+    --footer-bg-color: #e0e6ec; /* Light footer background */
+    --text-color: #333333; /* Dark text for readability */
+    --text-light-color: #555555; /* Lighter text for less emphasis */
+    --link-hover-color: #5682a3; /* Hover effect for links */
+    
+    /* Button Styles */
+    --button-bg-color: #88b7a1; /* Calming green for buttons */
+    --button-text-color: #ffffff; /* White text for buttons */
+    --button-border-radius: 30px; /* Rounded corners for buttons */
+    --button-hover-bg-color: #6c94c9; /* Darker green on hover */
+    
+    /* Card Styles */
+    --card-border-radius: 15px; /* Rounded corners for cards */
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+    --card-padding: 20px; /* Padding inside cards */
+    --card-bg-color-hover: #f7f7f7; /* Slight grey background on hover */
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--heading-font-weight);
+    color: var(--text-color);
+}
+
+/* Button Styles */
+button,
+a.btn {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border-radius: var(--button-border-radius);
+    padding: 12px 20px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover,
+a.btn:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+    padding: var(--card-padding);
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    background-color: var(--card-bg-color-hover);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .card {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    button,
+    a.btn {
+        padding: 10px 18px;
+    }
+}
