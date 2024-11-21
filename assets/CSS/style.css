@@ -88,6 +88,35 @@ a.btn:hover {
     background-color: var(--card-bg-color-hover);
 }
 
+/* General styles for the star rating */
+.star-scale {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Color coding */
+.star-scale .easy {
+    color: #28a745; /* Green */
+}
+.star-scale .moderate {
+    color: #ffc107; /* Yellow */
+}
+.star-scale .very-hard {
+    color: #fd7e14; /* Orange */
+}
+.star-scale .hardest {
+    color: #b30d0d; /* Red */
+}
+
+/* Star size adjustments */
+.star-scale i {
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-right: 2px;
+}
+
+
 /* Footer Styles */
 footer {
     background-color: var(--footer-bg-color);
