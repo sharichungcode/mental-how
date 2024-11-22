@@ -1,102 +1,243 @@
 /* Root Settings */
 :root {
-    /* Typography */
-    --font-family-primary: 'Roboto', sans-serif;
-    --font-family-secondary: 'Open Sans', sans-serif;
-    --font-size-base: 1rem; /* Default text size */
-    --line-height-base: 1.5; /* Default line height */
-    --heading-font-weight: 700; /* Bold weight for headings */
-    --body-font-weight: 400; /* Regular weight for body text */
-
     /* Colors */
-    --primary-color: #6c94c9; /* Calming blue (for links, buttons) */
-    --secondary-color: #88b7a1; /* Calming green (for backgrounds, highlights) */
-    --background-color: #f4f7fb; /* Light background color */
-    --card-bg-color: #ffffff; /* White for card backgrounds */
-    --footer-bg-color: #e0e6ec; /* Light footer background */
-    --text-color: #333333; /* Dark text for readability */
-    --text-light-color: #555555; /* Lighter text for less emphasis */
-    --link-hover-color: #5682a3; /* Hover effect for links */
-    
-    /* Button Styles */
-    --button-bg-color: #88b7a1; /* Calming green for buttons */
-    --button-text-color: #ffffff; /* White text for buttons */
-    --button-border-radius: 30px; /* Rounded corners for buttons */
-    --button-hover-bg-color: #6c94c9; /* Darker green on hover */
-    
-    /* Card Styles */
-    --card-border-radius: 15px; /* Rounded corners for cards */
-    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
-    --card-padding: 20px; /* Padding inside cards */
-    --card-bg-color-hover: #f7f7f7; /* Slight grey background on hover */
+    --bs-primary: #B331FC; /* Soothing Blue (calming, trust-building) */
+    --bs-secondary: #7837D2; /* Soft Green (relaxing, healing) */
+    --bs-success: #C4EF4E; /* Soft Success Green */
+    --bs-info: #a3d8ff; /* Light Cyan (calming, light) */
+    --bs-warning: #f8d088; /* Soft Yellow (positive but not overwhelming) */
+    --bs-danger: #e57373; /* Softer Red (for alerts without harshness) */
+    --bs-light: #f7f7f7; /* Very Light Gray (gentle background) */
+    --bs-dark: #130E26; /* Deep Grayish Blue (grounding, mature) */
+
+    /* RGB Colors */
+    --bs-primary-rgb: 179, 49, 252; /* Primary Blue RGB */
+    --bs-secondary-rgb: 120, 55, 210; /* Secondary Green RGB */
+    --bs-success-rgb: 196, 239, 78; /* Success Green RGB */
+    --bs-info-rgb: 163, 216, 255; /* Light Cyan RGB */
+    --bs-warning-rgb: 248, 208, 136; /* Soft Yellow RGB */
+    --bs-danger-rgb: 229, 115, 115; /* Softer Red RGB */
+    --bs-light-rgb: 247, 247, 247; /* Very Light Gray RGB */
+    --bs-dark-rgb: 19, 14, 38; /* Deep Grayish Blue RGB */
+
+    /* Text Emphasis */
+    --bs-primary-text-emphasis: #274f7c; /* Darker Blue for emphasis */
+    --bs-secondary-text-emphasis: #3e5d56; /* Dark Greenish Gray */
+    --bs-success-text-emphasis: #264e38; /* Deep Green */
+    --bs-info-text-emphasis: #3d6d8d; /* Darker Cyan */
+    --bs-warning-text-emphasis: #6a4e2f; /* Earthy Brown for warmth */
+    --bs-danger-text-emphasis: #9c4040; /* Darker Red */
+    --bs-light-text-emphasis: #5f6366; /* Muted Gray for light text */
+    --bs-dark-text-emphasis: #2a333a; /* Darker Gray for dark text */
+
+    /* Background Colors */
+    --bs-primary-bg-subtle: #cfe2ff; /* Light Soft Blue (subtle background for primary) */
+    --bs-secondary-bg-subtle: #c2e6d1; /* Light Mint Green (subtle background for secondary) */
+    --bs-success-bg-subtle: #d1e8d4; /* Soft Light Green (subtle background for success) */
+    --bs-info-bg-subtle: #e3f6ff; /* Light Blue (subtle background for info) */
+    --bs-warning-bg-subtle: #fff3d1; /* Soft Yellow (subtle background for warning) */
+    --bs-danger-bg-subtle: #f9d6d6; /* Light Coral (subtle background for danger) */
+    --bs-light-bg-subtle: #f7f7f7; /* Light Gray (subtle background for light) */
+    --bs-dark-bg-subtle: #e0e5e8; /* Light Blue Gray (subtle background for dark) */
+
+    /* Border Colors */
+    --bs-primary-border-subtle: #a7c9e7; /* Light Blue (border for primary) */
+    --bs-secondary-border-subtle: #8bbf9f; /* Soft Green (border for secondary) */
+    --bs-success-border-subtle: #93d1b5; /* Soft Green (border for success) */
+    --bs-info-border-subtle: #b7d8f9; /* Soft Cyan (border for info) */
+    --bs-warning-border-subtle: #f5e0a5; /* Soft Yellow (border for warning) */
+    --bs-danger-border-subtle: #f2b0b0; /* Soft Pink (border for danger) */
+    --bs-light-border-subtle: #e9ecef; /* Light Gray (border for light) */
+    --bs-dark-border-subtle: #c7d2d9; /* Light Blue Gray (border for dark) */
+
+    /* Call to Action */
+    --bs-cta-primary: #ff6f61; /* Strong Coral Red (sharp CTA) */
+    --bs-cta-primary-hover: #e55a4d; /* Darker Coral for hover */
+    --bs-cta-secondary: #ff8c42; /* Vibrant Orange (for secondary actions) */
+    --bs-cta-secondary-hover: #e8793b; /* Darker Orange for hover */
+
+    /* Highlight/Focus Colors */
+    --bs-focus-ring-color: rgba(179, 49, 252, 0.5); /* Soft Blue Focus */
+    --bs-focus-ring-width: 0.25rem; /* Soft Focus */
 }
 
-/* General Styles */
+/* Replace Button Colors in Bootstrap */
+.btn-primary {
+    --bs-btn-color: #fff; /* Text Color (White) */
+    --bs-btn-bg: #B331FC; /* Primary Blue */
+    --bs-btn-border-color: #B331FC;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7; /* Darker Blue */
+    --bs-btn-hover-border-color: #0a58ca; /* Darker Blue */
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #B331FC;
+    --bs-btn-disabled-border-color: #B331FC;
+}
+
+.btn-secondary {
+    --bs-btn-color: #fff; /* White */
+    --bs-btn-bg: #7837D2; /* Gray */
+    --bs-btn-border-color: #7837D2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #5c636a; /* Darker Gray */
+    --bs-btn-hover-border-color: #565e64; /* Dark Gray */
+    --bs-btn-focus-shadow-rgb: 130, 138, 145;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #565e64;
+    --bs-btn-active-border-color: #51585e;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #7837D2;
+    --bs-btn-disabled-border-color: #7837D2;
+}
+
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #C4EF4E; /* Green */
+    --bs-btn-border-color: #C4EF4E;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #157347; /* Dark Green */
+    --bs-btn-hover-border-color: #146c43; /* Dark Green */
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #146c43;
+    --bs-btn-active-border-color: #13653f;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #C4EF4E;
+    --bs-btn-disabled-border-color: #C4EF4E;
+}
+
+.btn-info {
+    --bs-btn-color: #000; /* Black */
+    --bs-btn-bg: #0dcaf0; /* Light Cyan */
+    --bs-btn-border-color: #0dcaf0;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #31d2f2; /* Brighter Cyan */
+    --bs-btn-hover-border-color: #25cff2;
+    --bs-btn-focus-shadow-rgb: 11, 172, 204;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #3dd5f3; /* Brighter Cyan */
+    --bs-btn-active-border-color: #25cff2;
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #0dcaf0;
+    --bs-btn-disabled-border-color: #0dcaf0;
+}
+
+.btn-warning {
+    --bs-btn-color: #000; /* Black */
+    --bs-btn-bg: #ffc107; /* Yellow */
+    --bs-btn-border-color: #ffc107;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #ffca2c; /* Brighter Yellow */
+    --bs-btn-hover-border-color: #ffc720; /* Darker Yellow */
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #ffcd39; /* Brighter Yellow */
+    --bs-btn-active-border-color: #ffc720;
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #ffc107;
+    --bs-btn-disabled-border-color: #ffc107;
+}
+
+.btn-danger {
+    --bs-btn-color: #fff; /* White */
+    --bs-btn-bg: #dc3545; /* Red */
+    --bs-btn-border-color: #dc3545;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb2d3b; /* Darker Red */
+    --bs-btn-hover-border-color: #b02a37; /* Dark Red */
+    --bs-btn-focus-shadow-rgb: 225, 83, 97;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #b02a37;
+    --bs-btn-active-border-color: #a52834;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #dc3545;
+    --bs-btn-disabled-border-color: #dc3545;
+}
+
+.btn-light {
+    --bs-btn-color: #000; /* Black */
+    --bs-btn-bg: #f8f9fa; /* Light Gray */
+    --bs-btn-border-color: #f8f9fa;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #d3d4d5; /* Darker Gray */
+    --bs-btn-hover-border-color: #c6c7c8; /* Slightly Darker Gray */
+    --bs-btn-focus-shadow-rgb: 211, 212, 213;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #c6c7c8;
+    --bs-btn-active-border-color: #babbbc;
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #f8f9fa;
+    --bs-btn-disabled-border-color: #f8f9fa;
+}
+
+.btn-dark {
+    --bs-btn-color: #fff; /* White */
+    --bs-btn-bg: #212529; /* Dark Gray */
+    --bs-btn-border-color: #212529;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #424649; /* Darker Gray */
+    --bs-btn-hover-border-color: #373b3e; /* Dark Gray */
+    --bs-btn-focus-shadow-rgb: 66, 70, 73;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #4d5154; /* Lighter Dark Gray */
+    --bs-btn-active-border-color: #373b3e;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #212529;
+    --bs-btn-disabled-border-color: #212529;
+}
+
+/* Outline Button Adjustments (for accessibility) */
+.btn-outline-primary {
+    --bs-btn-color: #B331FC;
+    --bs-btn-border-color: #B331FC;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #B331FC;
+    --bs-btn-hover-border-color: #B331FC;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #B331FC;
+    --bs-btn-active-border-color: #B331FC;
+    --bs-btn-disabled-color: #B331FC;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #B331FC;
+    --bs-gradient: none;
+}
+
+.btn-outline-danger {
+    --bs-btn-color: #dc3545;
+    --bs-btn-border-color: #dc3545;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #dc3545;
+    --bs-btn-hover-border-color: #dc3545;
+    --bs-btn-focus-shadow-rgb: 220, 53, 69;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #dc3545;
+    --bs-btn-active-border-color: #dc3545;
+    --bs-btn-disabled-color: #dc3545;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #dc3545;
+    --bs-gradient: none;
+}
+
 body {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-    color: var(--text-color);
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
+    padding-top: 88px; /* Adjust this based on the height of your navbar */
 }
 
-a {
-    color: var(--primary-color);
-    text-decoration: none;
+
+/* Navigation Bar Styles */
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030; /* Ensures it's on top of other content */
 }
 
-a:hover {
-    color: var(--link-hover-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--heading-font-weight);
-    color: var(--text-color);
-}
-
-/* Button Styles */
-button,
-a.btn {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border-radius: var(--button-border-radius);
-    padding: 12px 20px;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-button:hover,
-a.btn:hover {
-    background-color: var(--button-hover-bg-color);
-}
-
-/* Card Styles */
-.card {
-    background-color: var(--card-bg-color);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--card-shadow);
-    padding: var(--card-padding);
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.card:hover {
-    background-color: var(--card-bg-color-hover);
-}
-
-/* General styles for the star rating */
-.star-scale {
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Color coding */
+/* Star Scale Color Coding */
 .star-scale .easy {
     color: #28a745; /* Green */
 }
@@ -114,29 +255,4 @@ a.btn:hover {
 .star-scale i {
     font-size: 1.5rem; /* Adjust icon size */
     margin-right: 2px;
-}
-
-
-/* Footer Styles */
-footer {
-    background-color: var(--footer-bg-color);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    body {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
-    }
-
-    .card {
-        margin-bottom: 15px;
-        padding: 15px;
-    }
-
-    button,
-    a.btn {
-        padding: 10px 18px;
-    }
 }

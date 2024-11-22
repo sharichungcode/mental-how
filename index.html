@@ -1,58 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <!-- Bootstrap Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="assets/CSS/style.css">
     <title>Mind Balancer - Your Journey to Mental Well-being Begins Here.</title>
 </head>
+
 <body>
 
-    <main class="d-flex justify-content-center align-items-center min-vh-100">
-        <div class="container text-center">
-            <div class="row">
-              <div class="col-12">
-                <h1 class="display-3 mb-4 text-primary">Mind Balancer</h1>
-                <p class="lead text-muted">Your daily dose of positivity and empowerment.</p>
-                <p class="h4 text-secondary mb-4">Tap below for your affirmation today:</p>
-            </div>
-
-            <!-- Affirmation Card -->
-            <div class="col-12">
-            <div class="card mb-4 shadow-lg" id="affirmation-card">
-                <div class="card-header text-center">
-                    <div class="img-thumbnail mx-auto d-block" id="icon" style="width: 70px; height: 70px;"></div>
-                </div>
-                <div class="card-body">
-                    <p class="h5 font-weight-bold" id="affirmation">Loading an affirmation...</p>
-                </div>
-            </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="row">
-                <div class="col-12 col-md-6 mb-3">
-                    <button class="btn btn-outline-primary btn-lg w-100" onclick="pickRandomAffirmation()">Pick Another</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <a href="home.html" class="btn btn-success btn-lg w-100" >Continue</a>
-                </div>
+    <!-- Navbar -->
+    <nav class="fixed-navbar navbar navbar-expand-lg navbar-light bg-light shadow-sm py-4" aria-label="Main navigation">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand fw-bold text-primary" href="#" aria-label="Mind Balancer homepage">
+                Mind Balancer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Navbar Items -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" aria-label="Homepage">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help-others.html" aria-label="Help Others page">Help Others</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="useful-contacts.html" aria-label="Useful Contacts page">Useful
+                            Contacts</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="container-fluid mb-5 p-0">
+            <section id="hero" class="bg-dark p-5 text-white text-center">
+                <!-- Title and Intro -->
+                <div class="col-12">
+                    <h1 class="display-4 mb-3 font-weight-bold" id="hero-title">Welcome to Mind Balancer</h1>
+                    <p class="lead mb-3" id="hero-description">Your journey to mental well-being begins here.</p>
+                    <p class="h5 mb-4" id="hero-prompt">Tap below for your affirmation today:</p>
+                </div>
+
+                <!-- Affirmation Card -->
+                <div class="col-12">
+                    <div class="card mx-auto mb-4 shadow-lg text-dark" id="affirmation-card"
+                        style="max-width: 500px; border-radius: 15px;">
+                        <div class="card-header text-center border-0" style="background: transparent;">
+                            <div class="img-thumbnail mx-auto d-block rounded-circle mb-3" id="icon"
+                                style="width: 80px; height: 80px;" alt="Affirmation Icon">
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4"
+                            style="background: rgba(255, 255, 255, 0.9); border-radius: 10px;">
+                            <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="row">
+                    <!-- 'Pick Another' Button (Secondary) -->
+                    <div class="col-12 mb-3">
+                        <button class="btn btn-outline-light btn-lg w-100" onclick="pickRandomAffirmation()"
+                            aria-label="Pick another affirmation">
+                            Pick Another
+                        </button>
+                    </div>
+
+                    <!-- 'Continue' Button (Primary CTA) -->
+                    <div class="col-12">
+                        <a href="#who-needs-help" class="btn btn-primary btn-lg w-100"
+                            aria-label="Who Needs Help Today section">
+                            Seek for mental health help
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
+
+
+        <div class="container my-5">
+            <!-- Section 1: Who Needs Help Today -->
+            <section id="who-needs-help" class="text-center">
+                <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold">Who Needs Help Today?</h2>
+                <p id="who-needs-help-description">Choose who needs mental health support:</p>
+                <div class="d-flex justify-content-center flex-wrap mb-4">
+                    <!-- Primary Buttons -->
+                    <a href="help-myself.html" class="btn btn-primary btn-lg mx-2 mb-2"
+                        aria-label="Help Myself page">Myself</a>
+                    <a href="help-others.html" class="btn btn-primary btn-lg mx-2 mb-2"
+                        aria-label="Help Someone else page">Someone I Know</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <!-- Secondary Button (less obvious) -->
+                    <a href="#signs-of-need" class="btn btn-link mx-2 mb-2"
+                        aria-label="Signs Someone Needs Help section">I'm not sure</a>
+                </div>
+            </section>
+
+
+            <hr>
+
+            <!-- Section 2: Signs That Someone Might Need Help -->
+            <section id="signs-of-need" class="text-center">
+                <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold">Signs Someone Needs Help</h2>
+                <!-- Sorting and Filtering Controls -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <!-- Sort Dropdown -->
+                    <div>
+                        <label for="sortSigns" class="form-label me-2" id="sortSignsLabel">Sort by:</label>
+                        <select id="sortSigns" class="form-select w-auto d-inline-block"
+                            aria-labelledby="sortSignsLabel">
+                            <option value="easiest">Easiest to Discover</option>
+                            <option value="hardest">Hardest to Discover</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="all" aria-label="Show all signs">All</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="emotional" aria-label="Show emotional signs">Emotional</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="physical" aria-label="Show physical signs">Physical</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="behavioral" aria-label="Show behavioral signs">Behavioral</button>
+                    </div>
+                </div>
+
+                <!-- Signs List -->
+                <div id="signsList" class="row g-4">
+                    <!-- Example Sign Card -->
+                    <div class="col-md-4 sign-item behavioral" data-order="1">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Talking about death, hopelessness, or having no reason to live
+                                </h5>
+                                <span class="badge bg-info">Behavioral</span>
+                                <div class="star-scale mt-2">
+                                    <div class="stars easy">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="easy">Easiest to Discover</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 sign-item behavioral" data-order="2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Exhibiting signs of self-harm, such as unexplained cuts or
+                                    bruises</h5>
+                                <span class="badge bg-info">Behavioral</span>
+                                <div class="star-scale mt-2">
+                                    <div class="stars easy">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="easy">Easier to Discover</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 sign-item emotional" data-order="3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Persistent feelings of sadness, hopelessness, or emptiness</h5>
+                                <span class="badge bg-success">Emotional</span>
+                                <div class="star-scale mt-2">
+                                    <div class="stars moderate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="moderate">Moderate to Discover</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 sign-item emotional" data-order="4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Difficulty concentrating, making decisions, or remembering things
+                                </h5>
+                                <span class="badge bg-success">Emotional</span>
+                                <div class="star-scale mt-2">
+                                    <div class="stars hard">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="hard">Hardest to Discover</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                    <a href="help-myself.html" class="btn btn-primary btn-lg mx-2" aria-label="Help Myself page">Help
+                        Myself</a>
+                    <a href="help-others.html" class="btn btn-primary btn-lg mx-2" aria-label="Help Someone else page">Help
+                        Someone
+                        I Know</a>
+                </div>
+            </section>
+        </div>
+
     </main>
-    
-<!-- Bootstrap Javascript -->
+
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>© 2024 Mind Balancer | Designed with <i class="fa-solid fa-heart text-danger"></i> for mental well-being
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Random Affirmation Javascript -->
     <script>
-        const affirmations = [
-            {
+        const affirmations = [{
                 text: "I am confident and capable.",
                 icon: "https://img.icons8.com/ios/50/000000/confidence.png",
                 bgColor: "#FFCC00",
@@ -111,6 +306,41 @@
 
         // Pick a random affirmation on page load
         window.onload = pickRandomAffirmation;
+
+
+        // Filter Functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                const signs = document.querySelectorAll('.sign-item');
+
+                signs.forEach(sign => {
+                    if (filter === 'all' || sign.classList.contains(filter)) {
+                        sign.style.display = 'block'; // Show the matching items
+                    } else {
+                        sign.style.display = 'none'; // Hide non-matching items
+                    }
+                });
+            });
+        });
+
+        // Sort Functionality
+        document.getElementById('sortSigns').addEventListener('change', event => {
+            const sortValue = event.target.value;
+            const signsList = document.getElementById('signsList');
+            const signs = Array.from(signsList.children);
+
+            signs.sort((a, b) => {
+                const orderA = parseInt(a.getAttribute('data-order'));
+                const orderB = parseInt(b.getAttribute('data-order'));
+                return sortValue === 'easiest' ? orderA - orderB : orderB - orderA;
+            });
+
+            // Reorder the list
+            signs.forEach(sign => signsList.appendChild(sign));
+        });
     </script>
+
 </body>
+
 </html>
