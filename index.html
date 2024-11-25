@@ -18,36 +18,40 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="fixed-navbar navbar navbar-expand-lg navbar-light bg-light shadow-sm py-4" aria-label="Main navigation">
-        <div class="container">
-            <!-- Brand Logo -->
-            <a class="navbar-brand fw-bold text-primary" href="#" aria-label="Mind Balancer homepage">
-                Mind Balancer
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Navbar Items -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" aria-label="Homepage">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help-others.html" aria-label="Help Others page">Help Others</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="useful-contacts.html" aria-label="Useful Contacts page">Useful
-                            Contacts</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="fixed-navbar navbar navbar-expand-lg navbar-light bg-light shadow-sm py-4" aria-label="Main navigation">
+    <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand fw-bold text-primary" href="#" aria-label="Mind Balancer homepage">
+            Mind Balancer
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navbar Items -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" aria-label="Homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help-others.html" aria-label="Help Others page">Help Others</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Highlight Emergency Contacts -->
+                    <a class="btn btn-outline-danger fw-bold px-3 ms-lg-3" href="emergency-contacts.html"
+                        aria-label="Emergency Contacts page">
+                        Emergency Contacts
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
 
 
@@ -229,7 +233,26 @@
                         I Know</a>
                 </div>
             </section>
+
+            
         </div>
+
+        <!-- Emergency Help Section -->
+    <section class="bg-danger text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2 class="display-5 fw-bold">Need Immediate Mental Health Support?</h2>
+                    <p class="lead">
+                        If you or someone you know is in crisis, don't wait. We have resources and contacts available to provide urgent help.
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end text-center">
+                    <a href="emergency-contacts.html" class="btn btn-light btn-lg fw-bold">Get Emergency Contacts</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     </main>
 
