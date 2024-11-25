@@ -23,39 +23,38 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="fixed-navbar navbar navbar-expand-lg navbar-light bg-light shadow-sm py-4" aria-label="Main navigation">
-        <div class="container">
-            <!-- Brand Logo -->
-            <a class="navbar-brand fw-bold text-primary" href="#" aria-label="Mental How homepage">
-                Mental How
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Navbar Items -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" aria-label="Homepage">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="help-others.html" aria-label="Help Others page">Help Others</a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- Highlight Emergency Contacts -->
-                        <a class="btn btn-outline-danger fw-bold px-3 ms-lg-3" href="emergency-contacts.html"
-                            aria-label="Emergency Contacts page">
-                            Emergency Contacts
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<nav class="fixed-navbar navbar navbar-expand-lg navbar-light bg-light shadow-sm py-0" aria-label="Main navigation">
+    <div class="container ps-0 pe-3">
+        <!-- Brand Logo -->
+        <a class="navbar-brand fw-bold text-dark order-2 d-flex align-items-center" href="#" aria-label="Mental How homepage">
+            <img src="/assets/images/Logo.svg" alt="Mental How Logo" class="me-2" style="height: 22px;"> 
+            Mental How
+        </a>
+        <!-- Highlight Emergency Contacts -->
+        <a class="btn btn-outline-danger fw-bold px-3 ms-lg-3 order-3" href="emergency-contacts.html" aria-label="Emergency Contacts page">
+            Emergency
+        </a>
+
+        <button class="navbar-toggler p-4 border-0 text-dark order-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navbar-collapse collapse order-4" id="navbarNav">
+            <!-- Navbar Items -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" aria-label="Homepage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help-others.html" aria-label="Help Others page">Help Others</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
 
 

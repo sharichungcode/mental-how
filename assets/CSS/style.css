@@ -234,7 +234,7 @@
 }
 
 body {
-    padding-top: 88px; /* Adjust this based on the height of your navbar */
+    padding-top: 56px; /* Adjust this based on the height of your navbar */
     font-family: var(--main-font-family);
 }
 
@@ -243,9 +243,10 @@ h1, h2, h3 {
     font-weight: 700; /* Bold */
 }
 
-p {
+p, a {
     font-family: var(--main-font-family);
     font-weight: 400; /* Regular */
+    font-size: 1em;
 }
 
 /* Navigation Bar Styles */
