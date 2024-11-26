@@ -346,6 +346,7 @@ a {
     visibility: hidden;
     height: 0;
     overflow: hidden;
+    margin: 0;
 }
 
 /* Navigation Bar Styles */
