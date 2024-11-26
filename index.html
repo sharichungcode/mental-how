@@ -180,90 +180,301 @@
 
                 <!-- Signs List -->
                 <div id="signsList" class="row g-3 mb-4">
-                    <!-- Example Sign Card -->
-                    <div class="col-md-4 sign-item behavioral" data-order="1">
+                    <!-- Sign Card -->
+                    <div class="col-md-4 d-flex align-items-stretch sign-item emotional" data-order="3" style="display: block;">
                         <div class="card shadow-sm">
                             <div class="card-body position-relative py-5">
                                 <!-- Top Left: Icon and Filter Type -->
-                                <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center">
-                                    <i class="fa-solid fa-person-running me-2 text-primary"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge bg-info">Behavioral</span>
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-face-sad-tear me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Emotional</span>
                                 </div>
-
                                 <!-- Center: Description -->
                                 <div class="text-center mt-4">
-                                    <h5 class="card-title">Talking about death, hopelessness, or having no reason to
-                                        live</h5>
+                                    <h5 class="card-title">Feeling overwhelmed, stressed, or anxious most of the time</h5>
                                 </div>
-
                                 <!-- Bottom Right: Scale -->
                                 <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                    <span class="text-muted small">Easiest to Discover</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 sign-item behavioral" data-order="2">
-                        <div class="card shadow-sm">
-                            <div class="card-body position-relative py-5">
-                                <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center">
-                                    <i class="fa-solid fa-person-running me-2 text-primary"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge bg-info">Behavioral</span>
-                                </div>
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Exhibiting signs of self-harm, such as unexplained cuts or
-                                        bruises</h5>
-                                </div>
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                    <span class="text-muted small">Easier to Discover</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 sign-item emotional" data-order="3">
-                        <div class="card shadow-sm">
-                            <div class="card-body position-relative py-5">
-                                <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center">
-                                    <i class="fa-solid fa-face-sad-tear me-2 text-success"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge bg-success">Emotional</span>
-                                </div>
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Persistent feelings of sadness, hopelessness, or emptiness
-                                    </h5>
-                                </div>
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
                                     <span class="text-muted small">Moderate to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item emotional" data-order="5" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-face-sad-tear me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Emotional</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">A sudden loss of interest in hobbies or activities once enjoyed</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Hardest to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item emotional" data-order="2" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-face-sad-tear me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Emotional</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Difficulty concentrating, making decisions, or staying focused</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Easier to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item physical" data-order="3" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-bed me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Physical</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Significant changes in appetite or weight (eating too much or too little)</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Moderate to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item physical" data-order="2" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-bed me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Physical</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Physical fatigue or a lack of energy despite resting</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Easier to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item physical" data-order="4" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-bed me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Physical</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Frequent complaints of unexplained aches and pains (headaches, stomachaches)</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Hardest to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item behavioral" data-order="3" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-person-running me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Behavioral</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Withdrawing from friends, family, or social activities</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Moderate to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item behavioral" data-order="1" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-person-running me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Behavioral</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Loss of productivity at work or school</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Easiest to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item behavioral" data-order="4" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-person-running me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Behavioral</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Increased use of alcohol, drugs, or other risky behaviors</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Hardest to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item behavioral" data-order="3" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-person-running me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Behavioral</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Avoiding responsibilities or procrastinating excessively</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Moderate to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item behavioral" data-order="2" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-person-running me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Behavioral</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Unusual changes in speech or tone (e.g., speaking very slowly or erratically)</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Easier to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch sign-item behavioral" data-order="1" style="display: block;">
+                        <div class="card shadow-sm">
+                            <div class="card-body position-relative py-5">
+                                <!-- Top Left: Icon and Filter Type -->
+                                <div class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
+                                    <i class="fa-solid fa-person-running me-2 text-light" style="font-size: 1.2rem;"></i>
+                                    <span class="badge">Behavioral</span>
+                                </div>
+                                <!-- Center: Description -->
+                                <div class="text-center mt-4">
+                                    <h5 class="card-title">Exhibiting signs of self-harm, such as unexplained cuts or bruises</h5>
+                                </div>
+                                <!-- Bottom Right: Scale -->
+                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
+                                    <span class="text-muted small">Easiest to Discover</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                                            
                 </div>
 
 
 
 
-                <div class="d-flex justify-content-center">
-                    <a href="help-myself.html" class="btn btn-primary btn-lg mx-2" aria-label="Help Myself page">Help
+                <div class="d-flex justify-content-center d-flex">
+                    <a href="help-myself.html" class="btn btn-primary btn-lg me-2 flex-fill" aria-label="Help Myself page">Help
                         Myself</a>
-                    <a href="help-others.html" class="btn btn-primary btn-lg mx-2"
-                        aria-label="Help Someone else page">Help
+                    <a href="help-others.html" class="btn btn-primary btn-lg ms-2 flex-fill" aria-label="Help Someone else page">Help
                         Someone
                         I Know</a>
                 </div>
