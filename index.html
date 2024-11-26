@@ -133,30 +133,29 @@
 
             <!-- Section 2: Signs That Someone Might Need Help -->
             <section id="signs-of-need" class="text-center pt-5">
-                <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-3">Signs Someone Needs Help</h2>
+                <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-3">Signs That Someone Needs Help</h2>
                 <!-- Sorting and Filtering Controls -->
                 <div class="d-flex flex-column align-items-center mb-4">
                     <!-- Sort Dropdown -->
-                    <div class="d-flex w-100 align-items-center">
+                    <div class="d-flex w-100 align-items-center mb-3">
                         <label for="sortSigns" class="form-label me-2 mb-0 w-25" id="sortSignsLabel">Sort by:</label>
                         <select id="sortSigns" class="form-select w-auto d-inline-block flex-fill"
                             aria-labelledby="sortSignsLabel">
-                            <option value="easiest">Easiest to Discover</option>
-                            <option value="hardest">Hardest to Discover</option>
+                            <option value="easiest">Obviousness High to Low</option>
+                            <option value="hardest">Obviousness Low to High</option>
                         </select>
+
+                         
                     </div>
 
-                    <!-- Filter Buttons -->
-                    <div>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="all"
-                            aria-label="Show all signs">All</button>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="emotional"
-                            aria-label="Show emotional signs">Emotional</button>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="physical"
-                            aria-label="Show physical signs">Physical</button>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="behavioral"
-                            aria-label="Show behavioral signs">Behavioral</button>
-                    </div>
+                     <!-- Filter Buttons -->
+        <div class="btn-group" role="group" aria-label="Filter signs">
+            <button class="btn btn-outline-primary filter-btn" data-filter="all" aria-label="Show all signs">All</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="emotional" aria-label="Show emotional signs">Emotional</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="physical" aria-label="Show physical signs">Physical</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="behavioral" aria-label="Show behavioral signs">Behavioral</button>
+        </div>
+
                 </div>
 
                 <!-- Signs List -->
