@@ -334,6 +334,10 @@ a {
     font-size: 1em;
 }
 
+.btn {
+    font-size: 1rem;
+}
+
 /* Navigation Bar Styles */
 .fixed-navbar {
     position: fixed;
