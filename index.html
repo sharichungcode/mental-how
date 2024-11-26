@@ -42,13 +42,13 @@
             <!-- Navbar Items -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html" aria-label="Homepage">Home</a>
+                    <a class="nav-link ps-3 py-3" href="index.html" aria-label="Homepage">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
+                    <a class="nav-link ps-3 py-3" href="help-myself.html" aria-label="Help Myself page">Help Myself</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="help-others.html" aria-label="Help Others page">Help Others</a>
+                    <a class="nav-link ps-3 py-3" href="help-others.html" aria-label="Help Others page">Help Others</a>
                 </li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <div class="container-fluid mb-5 p-0">
+        <div class="container-fluid p-0">
             <section id="hero" class="bg-dark px-3 pt-4 pb-5 text-white text-center">
                 <!-- Title and Intro -->
                 <div class="col-12">
@@ -107,37 +107,39 @@
         </div>
 
 
-        <div class="container my-5">
+        <div class="container text-bg-light px-3 pb-5">
             <!-- Section 1: Who Needs Help Today -->
             <section id="who-needs-help" class="text-center pt-5">
-                <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold pt-5">Who Needs Help Today?</h2>
+                <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold pt-3">Who Needs Help?</h2>
                 <p id="who-needs-help-description">Choose who needs mental health support:</p>
-                <div class="d-flex justify-content-center flex-wrap mb-4">
+                <div class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm text-bg-light border border-dark">
                     <!-- Primary Buttons -->
-                    <a href="help-myself.html" class="btn btn-primary btn-lg mx-2 mb-2"
+                    <a href="help-myself.html" class="card-body legend text-decoration-none h2 p-3"
                         aria-label="Help Myself page">Myself</a>
-                    <a href="help-others.html" class="btn btn-primary btn-lg mx-2 mb-2"
+                    </div>
+                    <div class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm text-bg-light border border-dark">
+                    <a href="help-others.html" class="card-body legend text-decoration-none h2 p-3"
                         aria-label="Help Someone else page">Someone I Know</a>
                 </div>
                 <div class="d-flex justify-content-center">
                     <!-- Secondary Button (less obvious) -->
-                    <a href="#signs-of-need" class="btn btn-link mx-2 mb-2"
+                    <a href="#signs-of-need" class="text-decoration-none text-dark"
                         aria-label="Signs Someone Needs Help section">I'm not sure</a>
                 </div>
             </section>
+        </div>
 
-
-            <hr>
+            <div class="container px-3 pb-5">
 
             <!-- Section 2: Signs That Someone Might Need Help -->
             <section id="signs-of-need" class="text-center pt-5">
-                <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-5">Signs Someone Needs Help</h2>
+                <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-3">Signs Someone Needs Help</h2>
                 <!-- Sorting and Filtering Controls -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex flex-column align-items-center mb-4">
                     <!-- Sort Dropdown -->
-                    <div>
-                        <label for="sortSigns" class="form-label me-2" id="sortSignsLabel">Sort by:</label>
-                        <select id="sortSigns" class="form-select w-auto d-inline-block"
+                    <div class="d-flex w-100 align-items-center">
+                        <label for="sortSigns" class="form-label me-2 mb-0 w-25" id="sortSignsLabel">Sort by:</label>
+                        <select id="sortSigns" class="form-select w-auto d-inline-block flex-fill"
                             aria-labelledby="sortSignsLabel">
                             <option value="easiest">Easiest to Discover</option>
                             <option value="hardest">Hardest to Discover</option>

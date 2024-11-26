@@ -318,9 +318,9 @@ body {
     font-family: var(--main-font-family);
 }
 
-h1,
-h2,
-h3 {
+h1, .h1,
+h2, .h2,
+h3, .h3 {
     font-family: var(--title-font-family);
     font-weight: 700;
     /* Bold */
