@@ -11,74 +11,124 @@
     --title-font-family: "Noto Serif", serif;
 
     /* Colors */
-    --bs-primary: #B331FC; /* Soothing Blue (calming, trust-building) */
-    --bs-secondary: #7837D2; /* Soft Green (relaxing, healing) */
-    --bs-success: #C4EF4E; /* Soft Success Green */
-    --bs-info: #a3d8ff; /* Light Cyan (calming, light) */
-    --bs-warning: #f8d088; /* Soft Yellow (positive but not overwhelming) */
-    --bs-danger: #e57373; /* Softer Red (for alerts without harshness) */
-    --bs-light: #f7f7f7; /* Very Light Gray (gentle background) */
-    --bs-dark: #130E26; /* Deep Grayish Blue (grounding, mature) */
+    --bs-primary: #B331FC;
+    /* Soothing Blue (calming, trust-building) */
+    --bs-secondary: #7837D2;
+    /* Soft Green (relaxing, healing) */
+    --bs-success: #C4EF4E;
+    /* Soft Success Green */
+    --bs-info: #a3d8ff;
+    /* Light Cyan (calming, light) */
+    --bs-warning: #f8d088;
+    /* Soft Yellow (positive but not overwhelming) */
+    --bs-danger: #e57373;
+    /* Softer Red (for alerts without harshness) */
+    --bs-light: #f7f7f7;
+    /* Very Light Gray (gentle background) */
+    --bs-dark: #130E26;
+    /* Deep Grayish Blue (grounding, mature) */
 
     /* RGB Colors */
-    --bs-primary-rgb: 179, 49, 252; /* Primary Blue RGB */
-    --bs-secondary-rgb: 120, 55, 210; /* Secondary Green RGB */
-    --bs-success-rgb: 196, 239, 78; /* Success Green RGB */
-    --bs-info-rgb: 163, 216, 255; /* Light Cyan RGB */
-    --bs-warning-rgb: 248, 208, 136; /* Soft Yellow RGB */
-    --bs-danger-rgb: 229, 115, 115; /* Softer Red RGB */
-    --bs-light-rgb: 247, 247, 247; /* Very Light Gray RGB */
-    --bs-dark-rgb: 19, 14, 38; /* Deep Grayish Blue RGB */
+    --bs-primary-rgb: 179, 49, 252;
+    /* Primary Blue RGB */
+    --bs-secondary-rgb: 120, 55, 210;
+    /* Secondary Green RGB */
+    --bs-success-rgb: 196, 239, 78;
+    /* Success Green RGB */
+    --bs-info-rgb: 163, 216, 255;
+    /* Light Cyan RGB */
+    --bs-warning-rgb: 248, 208, 136;
+    /* Soft Yellow RGB */
+    --bs-danger-rgb: 229, 115, 115;
+    /* Softer Red RGB */
+    --bs-light-rgb: 247, 247, 247;
+    /* Very Light Gray RGB */
+    --bs-dark-rgb: 19, 14, 38;
+    /* Deep Grayish Blue RGB */
 
     /* Text Emphasis */
-    --bs-primary-text-emphasis: #274f7c; /* Darker Blue for emphasis */
-    --bs-secondary-text-emphasis: #3e5d56; /* Dark Greenish Gray */
-    --bs-success-text-emphasis: #264e38; /* Deep Green */
-    --bs-info-text-emphasis: #3d6d8d; /* Darker Cyan */
-    --bs-warning-text-emphasis: #6a4e2f; /* Earthy Brown for warmth */
-    --bs-danger-text-emphasis: #9c4040; /* Darker Red */
-    --bs-light-text-emphasis: #5f6366; /* Muted Gray for light text */
-    --bs-dark-text-emphasis: #2a333a; /* Darker Gray for dark text */
+    --bs-primary-text-emphasis: #274f7c;
+    /* Darker Blue for emphasis */
+    --bs-secondary-text-emphasis: #3e5d56;
+    /* Dark Greenish Gray */
+    --bs-success-text-emphasis: #264e38;
+    /* Deep Green */
+    --bs-info-text-emphasis: #3d6d8d;
+    /* Darker Cyan */
+    --bs-warning-text-emphasis: #6a4e2f;
+    /* Earthy Brown for warmth */
+    --bs-danger-text-emphasis: #9c4040;
+    /* Darker Red */
+    --bs-light-text-emphasis: #5f6366;
+    /* Muted Gray for light text */
+    --bs-dark-text-emphasis: #2a333a;
+    /* Darker Gray for dark text */
 
     /* Background Colors */
-    --bs-primary-bg-subtle: #cfe2ff; /* Light Soft Blue (subtle background for primary) */
-    --bs-secondary-bg-subtle: #c2e6d1; /* Light Mint Green (subtle background for secondary) */
-    --bs-success-bg-subtle: #d1e8d4; /* Soft Light Green (subtle background for success) */
-    --bs-info-bg-subtle: #e3f6ff; /* Light Blue (subtle background for info) */
-    --bs-warning-bg-subtle: #fff3d1; /* Soft Yellow (subtle background for warning) */
-    --bs-danger-bg-subtle: #f9d6d6; /* Light Coral (subtle background for danger) */
-    --bs-light-bg-subtle: #f7f7f7; /* Light Gray (subtle background for light) */
-    --bs-dark-bg-subtle: #e0e5e8; /* Light Blue Gray (subtle background for dark) */
+    --bs-primary-bg-subtle: #cfe2ff;
+    /* Light Soft Blue (subtle background for primary) */
+    --bs-secondary-bg-subtle: #c2e6d1;
+    /* Light Mint Green (subtle background for secondary) */
+    --bs-success-bg-subtle: #d1e8d4;
+    /* Soft Light Green (subtle background for success) */
+    --bs-info-bg-subtle: #e3f6ff;
+    /* Light Blue (subtle background for info) */
+    --bs-warning-bg-subtle: #fff3d1;
+    /* Soft Yellow (subtle background for warning) */
+    --bs-danger-bg-subtle: #f9d6d6;
+    /* Light Coral (subtle background for danger) */
+    --bs-light-bg-subtle: #f7f7f7;
+    /* Light Gray (subtle background for light) */
+    --bs-dark-bg-subtle: #e0e5e8;
+    /* Light Blue Gray (subtle background for dark) */
 
     /* Border Colors */
-    --bs-primary-border-subtle: #a7c9e7; /* Light Blue (border for primary) */
-    --bs-secondary-border-subtle: #8bbf9f; /* Soft Green (border for secondary) */
-    --bs-success-border-subtle: #93d1b5; /* Soft Green (border for success) */
-    --bs-info-border-subtle: #b7d8f9; /* Soft Cyan (border for info) */
-    --bs-warning-border-subtle: #f5e0a5; /* Soft Yellow (border for warning) */
-    --bs-danger-border-subtle: #f2b0b0; /* Soft Pink (border for danger) */
-    --bs-light-border-subtle: #e9ecef; /* Light Gray (border for light) */
-    --bs-dark-border-subtle: #c7d2d9; /* Light Blue Gray (border for dark) */
+    --bs-primary-border-subtle: #a7c9e7;
+    /* Light Blue (border for primary) */
+    --bs-secondary-border-subtle: #8bbf9f;
+    /* Soft Green (border for secondary) */
+    --bs-success-border-subtle: #93d1b5;
+    /* Soft Green (border for success) */
+    --bs-info-border-subtle: #b7d8f9;
+    /* Soft Cyan (border for info) */
+    --bs-warning-border-subtle: #f5e0a5;
+    /* Soft Yellow (border for warning) */
+    --bs-danger-border-subtle: #f2b0b0;
+    /* Soft Pink (border for danger) */
+    --bs-light-border-subtle: #e9ecef;
+    /* Light Gray (border for light) */
+    --bs-dark-border-subtle: #c7d2d9;
+    /* Light Blue Gray (border for dark) */
 
     /* Call to Action */
-    --bs-cta-primary: #ff6f61; /* Strong Coral Red (sharp CTA) */
-    --bs-cta-primary-hover: #e55a4d; /* Darker Coral for hover */
-    --bs-cta-secondary: #ff8c42; /* Vibrant Orange (for secondary actions) */
-    --bs-cta-secondary-hover: #e8793b; /* Darker Orange for hover */
+    --bs-cta-primary: #ff6f61;
+    /* Strong Coral Red (sharp CTA) */
+    --bs-cta-primary-hover: #e55a4d;
+    /* Darker Coral for hover */
+    --bs-cta-secondary: #ff8c42;
+    /* Vibrant Orange (for secondary actions) */
+    --bs-cta-secondary-hover: #e8793b;
+    /* Darker Orange for hover */
 
     /* Highlight/Focus Colors */
-    --bs-focus-ring-color: rgba(179, 49, 252, 0.5); /* Soft Blue Focus */
-    --bs-focus-ring-width: 0.25rem; /* Soft Focus */
+    --bs-focus-ring-color: rgba(179, 49, 252, 0.5);
+    /* Soft Blue Focus */
+    --bs-focus-ring-width: 0.25rem;
+    /* Soft Focus */
 }
 
 /* Replace Button Colors in Bootstrap */
 .btn-primary {
-    --bs-btn-color: #fff; /* Text Color (White) */
-    --bs-btn-bg: #B331FC; /* Primary Blue */
+    --bs-btn-color: #fff;
+    /* Text Color (White) */
+    --bs-btn-bg: #B331FC;
+    /* Primary Blue */
     --bs-btn-border-color: #B331FC;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7; /* Darker Blue */
-    --bs-btn-hover-border-color: #0a58ca; /* Darker Blue */
+    --bs-btn-hover-bg: #0b5ed7;
+    /* Darker Blue */
+    --bs-btn-hover-border-color: #0a58ca;
+    /* Darker Blue */
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #0a58ca;
@@ -89,12 +139,16 @@
 }
 
 .btn-secondary {
-    --bs-btn-color: #fff; /* White */
-    --bs-btn-bg: #7837D2; /* Gray */
+    --bs-btn-color: #fff;
+    /* White */
+    --bs-btn-bg: #7837D2;
+    /* Gray */
     --bs-btn-border-color: #7837D2;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #5c636a; /* Darker Gray */
-    --bs-btn-hover-border-color: #565e64; /* Dark Gray */
+    --bs-btn-hover-bg: #5c636a;
+    /* Darker Gray */
+    --bs-btn-hover-border-color: #565e64;
+    /* Dark Gray */
     --bs-btn-focus-shadow-rgb: 130, 138, 145;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #565e64;
@@ -106,11 +160,14 @@
 
 .btn-success {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #C4EF4E; /* Green */
+    --bs-btn-bg: #C4EF4E;
+    /* Green */
     --bs-btn-border-color: #C4EF4E;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #157347; /* Dark Green */
-    --bs-btn-hover-border-color: #146c43; /* Dark Green */
+    --bs-btn-hover-bg: #157347;
+    /* Dark Green */
+    --bs-btn-hover-border-color: #146c43;
+    /* Dark Green */
     --bs-btn-focus-shadow-rgb: 60, 153, 110;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #146c43;
@@ -121,15 +178,19 @@
 }
 
 .btn-info {
-    --bs-btn-color: #000; /* Black */
-    --bs-btn-bg: #0dcaf0; /* Light Cyan */
+    --bs-btn-color: #000;
+    /* Black */
+    --bs-btn-bg: #0dcaf0;
+    /* Light Cyan */
     --bs-btn-border-color: #0dcaf0;
     --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #31d2f2; /* Brighter Cyan */
+    --bs-btn-hover-bg: #31d2f2;
+    /* Brighter Cyan */
     --bs-btn-hover-border-color: #25cff2;
     --bs-btn-focus-shadow-rgb: 11, 172, 204;
     --bs-btn-active-color: #000;
-    --bs-btn-active-bg: #3dd5f3; /* Brighter Cyan */
+    --bs-btn-active-bg: #3dd5f3;
+    /* Brighter Cyan */
     --bs-btn-active-border-color: #25cff2;
     --bs-btn-disabled-color: #000;
     --bs-btn-disabled-bg: #0dcaf0;
@@ -137,15 +198,20 @@
 }
 
 .btn-warning {
-    --bs-btn-color: #000; /* Black */
-    --bs-btn-bg: #ffc107; /* Yellow */
+    --bs-btn-color: #000;
+    /* Black */
+    --bs-btn-bg: #ffc107;
+    /* Yellow */
     --bs-btn-border-color: #ffc107;
     --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #ffca2c; /* Brighter Yellow */
-    --bs-btn-hover-border-color: #ffc720; /* Darker Yellow */
+    --bs-btn-hover-bg: #ffca2c;
+    /* Brighter Yellow */
+    --bs-btn-hover-border-color: #ffc720;
+    /* Darker Yellow */
     --bs-btn-focus-shadow-rgb: 217, 164, 6;
     --bs-btn-active-color: #000;
-    --bs-btn-active-bg: #ffcd39; /* Brighter Yellow */
+    --bs-btn-active-bg: #ffcd39;
+    /* Brighter Yellow */
     --bs-btn-active-border-color: #ffc720;
     --bs-btn-disabled-color: #000;
     --bs-btn-disabled-bg: #ffc107;
@@ -153,12 +219,16 @@
 }
 
 .btn-danger {
-    --bs-btn-color: #fff; /* White */
-    --bs-btn-bg: #dc3545; /* Red */
+    --bs-btn-color: #fff;
+    /* White */
+    --bs-btn-bg: #dc3545;
+    /* Red */
     --bs-btn-border-color: #dc3545;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #bb2d3b; /* Darker Red */
-    --bs-btn-hover-border-color: #b02a37; /* Dark Red */
+    --bs-btn-hover-bg: #bb2d3b;
+    /* Darker Red */
+    --bs-btn-hover-border-color: #b02a37;
+    /* Dark Red */
     --bs-btn-focus-shadow-rgb: 225, 83, 97;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #b02a37;
@@ -169,12 +239,16 @@
 }
 
 .btn-light {
-    --bs-btn-color: #000; /* Black */
-    --bs-btn-bg: #f8f9fa; /* Light Gray */
+    --bs-btn-color: #000;
+    /* Black */
+    --bs-btn-bg: #f8f9fa;
+    /* Light Gray */
     --bs-btn-border-color: #f8f9fa;
     --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #d3d4d5; /* Darker Gray */
-    --bs-btn-hover-border-color: #c6c7c8; /* Slightly Darker Gray */
+    --bs-btn-hover-bg: #d3d4d5;
+    /* Darker Gray */
+    --bs-btn-hover-border-color: #c6c7c8;
+    /* Slightly Darker Gray */
     --bs-btn-focus-shadow-rgb: 211, 212, 213;
     --bs-btn-active-color: #000;
     --bs-btn-active-bg: #c6c7c8;
@@ -185,15 +259,20 @@
 }
 
 .btn-dark {
-    --bs-btn-color: #fff; /* White */
-    --bs-btn-bg: #212529; /* Dark Gray */
+    --bs-btn-color: #fff;
+    /* White */
+    --bs-btn-bg: #212529;
+    /* Dark Gray */
     --bs-btn-border-color: #212529;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #424649; /* Darker Gray */
-    --bs-btn-hover-border-color: #373b3e; /* Dark Gray */
+    --bs-btn-hover-bg: #424649;
+    /* Darker Gray */
+    --bs-btn-hover-border-color: #373b3e;
+    /* Dark Gray */
     --bs-btn-focus-shadow-rgb: 66, 70, 73;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #4d5154; /* Lighter Dark Gray */
+    --bs-btn-active-bg: #4d5154;
+    /* Lighter Dark Gray */
     --bs-btn-active-border-color: #373b3e;
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #212529;
@@ -234,18 +313,24 @@
 }
 
 body {
-    padding-top: 52.5px; /* Adjust this based on the height of your navbar */
+    padding-top: 52.5px;
+    /* Adjust this based on the height of your navbar */
     font-family: var(--main-font-family);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--title-font-family);
-    font-weight: 700; /* Bold */
+    font-weight: 700;
+    /* Bold */
 }
 
-p, a {
+p,
+a {
     font-family: var(--main-font-family);
-    font-weight: 400; /* Regular */
+    font-weight: 400;
+    /* Regular */
     font-size: 1em;
 }
 
@@ -255,25 +340,71 @@ p, a {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1030; /* Ensures it's on top of other content */
+    z-index: 1030;
+    /* Ensures it's on top of other content */
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('/assets/images/bg_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 14, 38, 0.6); /* Adjust transparency and color */
+    z-index: 1; /* Ensures the overlay is on top of the background */
+}
+
+/* Affiramation Card */
+#affirmation-card {
+    background-image: url('/assets/images/bg_affirmation.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 257px; /* All cards will have the same height */
+    
+}
+
+#affirmation-card p {
+    font-family: var(--title-font-family);
+}
+#hero > * {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
 }
 
 /* Star Scale Color Coding */
 .star-scale .easy {
-    color: #28a745; /* Green */
+    color: #28a745;
+    /* Green */
 }
+
 .star-scale .moderate {
-    color: #ffc107; /* Yellow */
+    color: #ffc107;
+    /* Yellow */
 }
+
 .star-scale .very-hard {
-    color: #fd7e14; /* Orange */
+    color: #fd7e14;
+    /* Orange */
 }
+
 .star-scale .hardest {
-    color: #b30d0d; /* Red */
+    color: #b30d0d;
+    /* Red */
 }
 
 /* Star size adjustments */
 .star-scale i {
-    font-size: 1.5rem; /* Adjust icon size */
+    font-size: 1.5rem;
+    /* Adjust icon size */
     margin-right: 2px;
 }

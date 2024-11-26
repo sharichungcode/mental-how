@@ -63,24 +63,23 @@
     <main>
         <!-- Hero Section -->
         <div class="container-fluid mb-5 p-0">
-            <section id="hero" class="bg-dark p-5 text-white text-center">
+            <section id="hero" class="bg-dark px-3 pt-4 pb-5 text-white text-center">
                 <!-- Title and Intro -->
                 <div class="col-12">
                     <h1 id="hero-title" class="display-4 mb-3 font-weight-bold">Begin your mental wellness journey.</h1>
-                    <p class="h5 mb-4" id="hero-prompt">Affirmation for today:</p>
+                    <p class="h6 mb-3" id="hero-prompt">Affirmation for today:</p>
                 </div>
 
                 <!-- Affirmation Card -->
                 <div class="col-12">
-                    <div class="card mx-auto mb-4 shadow-lg text-dark" id="affirmation-card"
+                    <div class="card mx-auto mb-4 shadow-lg text-dark rounded-2 p-5 align-self-center" id="affirmation-card"
                         style="max-width: 500px; border-radius: 15px;">
-                        <div class="card-header text-center border-0" style="background: transparent;">
-                            <div class="img-thumbnail mx-auto d-block rounded-circle mb-3" id="icon"
-                                style="width: 80px; height: 80px;" alt="Affirmation Icon">
+                        <div class="text-center border-0" style="background: transparent;">
+                            <div class="mx-auto d-block m-2 mb-3" id="icon"
+                                style="width: 32px; height: 32px;" alt="Affirmation Icon">
                             </div>
                         </div>
-                        <div class="card-body text-center p-4"
-                            style="background: rgba(255, 255, 255, 0.9); border-radius: 10px;">
+                        <div class="text-center p-0">
                             <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
                         </div>
                     </div>
@@ -280,62 +279,65 @@
 
     <!-- Random Affirmation Javascript -->
     <script>
-        const affirmations = [{
-                text: "I am confident and capable.",
-                icon: "https://img.icons8.com/ios/50/000000/confidence.png",
-                bgColor: "#FFCC00",
-                bgImage: "https://images.unsplash.com/photo-1601758007465-c7e9cd84a6d7?fit=crop&w=500&h=500&q=80"
-            },
-            {
-                text: "I am worthy of all the good things that come my way.",
-                icon: "https://img.icons8.com/ios/50/000000/star.png",
-                bgColor: "#00CC99",
-                bgImage: "https://images.unsplash.com/photo-1470186954910-09cc8d5079b9?fit=crop&w=500&h=500&q=80"
-            },
-            {
-                text: "I choose happiness and peace every day.",
-                icon: "https://img.icons8.com/ios/50/000000/heart.png",
-                bgColor: "#FF6347",
-                bgImage: "https://images.unsplash.com/photo-1484239179165-b7a7f41f5993?fit=crop&w=500&h=500&q=80"
-            },
-            {
-                text: "I am grateful for all that I have and all that is yet to come.",
-                icon: "https://img.icons8.com/ios/50/000000/thank-you.png",
-                bgColor: "#FF8C00",
-                bgImage: "https://images.unsplash.com/photo-1501594907353-e6b564034dc7?fit=crop&w=500&h=500&q=80"
-            },
-            {
-                text: "I am constantly growing and evolving into a better version of myself.",
-                icon: "https://img.icons8.com/ios/50/000000/growth.png",
-                bgColor: "#6A5ACD",
-                bgImage: "https://images.unsplash.com/photo-1560525663-b03ca5e42cc2?fit=crop&w=500&h=500&q=80"
-            },
-            {
-                text: "I am in control of my thoughts and actions.",
-                icon: "https://img.icons8.com/ios/50/000000/brain.png",
-                bgColor: "#32CD32",
-                bgImage: "https://images.unsplash.com/photo-1497062106349-0d3c842de0bc?fit=crop&w=500&h=500&q=80"
-            }
-        ];
+        const affirmations = [
+    {
+        text: "I am confident and capable.",
+        icon: "fa-solid fa-user-check", // Font Awesome class
+        bgColor: "rgba(247, 247, 247, 0.9)",
+        bgImage: "assets/images/bg_affirmation.png"
+    },
+    {
+        text: "I am worthy of all the good things that come my way.",
+        icon: "fa-solid fa-star", // Font Awesome class
+        bgColor: "rgba(247, 247, 247, 0.9)",
+        bgImage: "assets/images/bg_affirmation.png"
+    },
+    {
+        text: "I choose happiness and peace every day.",
+        icon: "fa-solid fa-heart", // Font Awesome class
+        bgColor: "rgba(247, 247, 247, 0.9)",
+        bgImage: "assets/images/bg_affirmation.png"
+    },
+    {
+        text: "I am grateful for all that I have and all that is yet to come.",
+        icon: "fa-solid fa-thumbs-up", // Font Awesome class
+        bgColor: "rgba(247, 247, 247, 0.9)",
+        bgImage: "assets/images/bg_affirmation.png"
+    },
+    {
+        text: "I am constantly growing and evolving into a better version of myself.",
+        icon: "fa-solid fa-seedling", // Font Awesome class
+        bgColor: "rgba(247, 247, 247, 0.9)",
+        bgImage: "assets/images/bg_affirmation.png"
+    },
+    {
+        text: "I am in control of my thoughts and actions.",
+        icon: "fa-solid fa-brain", // Font Awesome class
+        bgColor: "rgba(247, 247, 247, 0.9)",
+        bgImage: "assets/images/bg_affirmation.png"
+    }
+];
 
-        function pickRandomAffirmation() {
-            const randomIndex = Math.floor(Math.random() * affirmations.length);
-            const affirmationData = affirmations[randomIndex];
 
-            // Set affirmation text
-            document.getElementById("affirmation").textContent = affirmationData.text;
+function pickRandomAffirmation() {
+    const randomIndex = Math.floor(Math.random() * affirmations.length);
+    const affirmationData = affirmations[randomIndex];
 
-            // Set background color
-            document.getElementById("affirmation-card").style.backgroundColor = affirmationData.bgColor;
-            document.getElementById("affirmation-card").style.backgroundImage = `url(${affirmationData.bgImage})`;
-            document.getElementById("affirmation-card").style.backgroundSize = 'cover';
-            document.getElementById("affirmation-card").style.backgroundPosition = 'center';
+    // Set affirmation text
+    document.getElementById("affirmation").textContent = affirmationData.text;
 
-            // Set icon
-            document.getElementById("icon").style.backgroundImage = `url(${affirmationData.icon})`;
-            document.getElementById("icon").style.backgroundSize = "contain";
-            document.getElementById("icon").style.backgroundRepeat = "no-repeat";
-        }
+    // Set background color and image
+    const card = document.getElementById("affirmation-card");
+    card.style.backgroundColor = affirmationData.bgColor;
+    card.style.backgroundImage = `url(${affirmationData.bgImage})`;
+    card.style.backgroundSize = "cover";
+    card.style.backgroundPosition = "center";
+
+    // Set icon using Font Awesome
+    const iconElement = document.getElementById("icon");
+    iconElement.innerHTML = `<i class="${affirmationData.icon}" style="font-size: 2rem; color: var(--bs-dark);"></i>`;
+}
+
 
         // Pick a random affirmation on page load
         window.onload = pickRandomAffirmation;
