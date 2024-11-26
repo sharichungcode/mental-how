@@ -112,12 +112,12 @@
             <section id="who-needs-help" class="text-center pt-5">
                 <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold pt-3">Who Needs Help?</h2>
                 <p id="who-needs-help-description">Choose who needs mental health support:</p>
-                <div class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm text-bg-light border border-dark">
+                <div class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm-sm text-bg-light border border-dark">
                     <!-- Primary Buttons -->
                     <a href="help-myself.html" class="card-body legend text-decoration-none h2 p-3"
                         aria-label="Help Myself page">Myself</a>
                     </div>
-                    <div class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm text-bg-light border border-dark">
+                    <div class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm-sm text-bg-light border border-dark">
                     <a href="help-others.html" class="card-body legend text-decoration-none h2 p-3"
                         aria-label="Help Someone else page">Someone I Know</a>
                 </div>
@@ -136,100 +136,105 @@
                 <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-3">Signs That Someone Needs Help</h2>
                 <!-- Sorting and Filtering Controls -->
                 <div class="d-flex flex-column align-items-center mb-4">
-                    <!-- Sort Dropdown -->
-                    <div class="d-flex w-100 align-items-center mb-3">
-                        <label for="sortSigns" class="form-label me-2 mb-0 w-25" id="sortSignsLabel">Sort by:</label>
-                        <select id="sortSigns" class="form-select w-auto d-inline-block flex-fill"
-                            aria-labelledby="sortSignsLabel">
-                            <option value="easiest">Obviousness High to Low</option>
-                            <option value="hardest">Obviousness Low to High</option>
-                        </select>
+                  <!-- Sort Dropdown -->
+<div class="d-flex w-100 align-items-center">
+    <div class="btn-group flex-fill mb-3">
+        <button type="button" class="btn btn-outline-dark d-flex justify-content-between align-items-center rounded-2" data-bs-toggle="dropdown" aria-expanded="false">
+            <span>Sort by: <span id="sortButtonLabel">Easiest to Discover</span></span>
+            <i class="fa-solid fa-caret-down ms-2"></i>
+        </button>
+        <ul class="dropdown-menu" id="sortSignsDropdown">
+            <li><a class="dropdown-item" href="#" data-value="easiest">Easiest to Discover</a></li>
+            <li><a class="dropdown-item" href="#" data-value="hardest">Hardest to Discover</a></li>
+        </ul>
+    </div>
+</div>
 
-                         
-                    </div>
+                    
 
                      <!-- Filter Buttons -->
-        <div class="btn-group" role="group" aria-label="Filter signs">
-            <button class="btn btn-outline-primary filter-btn" data-filter="all" aria-label="Show all signs">All</button>
-            <button class="btn btn-outline-primary filter-btn" data-filter="emotional" aria-label="Show emotional signs">Emotional</button>
-            <button class="btn btn-outline-primary filter-btn" data-filter="physical" aria-label="Show physical signs">Physical</button>
-            <button class="btn btn-outline-primary filter-btn" data-filter="behavioral" aria-label="Show behavioral signs">Behavioral</button>
-        </div>
+<div class="btn-group d-flex w-100" role="group" aria-label="Filter signs">
+    <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="all" aria-label="Show all signs">All</button>
+    <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="emotional" aria-label="Show emotional signs">Emotional</button>
+    <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="physical" aria-label="Show physical signs">Physical</button>
+    <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="behavioral" aria-label="Show behavioral signs">Behavioral</button>
+</div>
+
 
                 </div>
 
                 <!-- Signs List -->
-                <div id="signsList" class="row g-4">
-                    <!-- Example Sign Card -->
-                    <div class="col-md-4 sign-item behavioral" data-order="1">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Talking about death, hopelessness, or having no reason to live
-                                </h5>
-                                <span class="badge bg-info">Behavioral</span>
-                                <div class="star-scale mt-2">
-                                    <div class="stars easy">
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <span class="easy">Easiest to Discover</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 sign-item behavioral" data-order="2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Exhibiting signs of self-harm, such as unexplained cuts or
-                                    bruises</h5>
-                                <span class="badge bg-info">Behavioral</span>
-                                <div class="star-scale mt-2">
-                                    <div class="stars easy">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <span class="easy">Easier to Discover</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 sign-item emotional" data-order="3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Persistent feelings of sadness, hopelessness, or emptiness</h5>
-                                <span class="badge bg-success">Emotional</span>
-                                <div class="star-scale mt-2">
-                                    <div class="stars moderate">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <span class="moderate">Moderate to Discover</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 sign-item emotional" data-order="4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Difficulty concentrating, making decisions, or remembering things
-                                </h5>
-                                <span class="badge bg-success">Emotional</span>
-                                <div class="star-scale mt-2">
-                                    <div class="stars hard">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <span class="hard">Hardest to Discover</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div id="signsList" class="row g-4 mb-3">
+    <!-- Example Sign Card -->
+    <div class="col-md-4 sign-item behavioral" data-order="1">
+        <div class="card shadow-sm">
+            <div class="card-body position-relative">
+                <!-- Top Left: Icon and Filter Type -->
+                <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center">
+                    <i class="fa-solid fa-person-running me-2 text-primary" style="font-size: 1.2rem;"></i>
+                    <span class="badge bg-info">Behavioral</span>
                 </div>
+
+                <!-- Top Right: Scale -->
+                <div class="position-absolute top-0 end-0 m-3 text-end">
+                    <div class="stars">
+                        <i class="fa-solid fa-star text-warning"></i>
+                    </div>
+                    <span class="text-muted small">Easiest to Discover</span>
+                </div>
+
+                <!-- Center: Description -->
+                <div class="text-center mt-5">
+                    <h5 class="card-title">Talking about death, hopelessness, or having no reason to live</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 sign-item behavioral" data-order="2">
+        <div class="card shadow-sm">
+            <div class="card-body position-relative">
+                <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center">
+                    <i class="fa-solid fa-person-running me-2 text-primary" style="font-size: 1.2rem;"></i>
+                    <span class="badge bg-info">Behavioral</span>
+                </div>
+                <div class="position-absolute top-0 end-0 m-3 text-end">
+                    <div class="stars">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                    </div>
+                    <span class="text-muted small">Easier to Discover</span>
+                </div>
+                <div class="text-center mt-5">
+                    <h5 class="card-title">Exhibiting signs of self-harm, such as unexplained cuts or bruises</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 sign-item emotional" data-order="3">
+        <div class="card shadow-sm">
+            <div class="card-body position-relative">
+                <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center">
+                    <i class="fa-solid fa-face-sad-tear me-2 text-success" style="font-size: 1.2rem;"></i>
+                    <span class="badge bg-success">Emotional</span>
+                </div>
+                <div class="position-absolute top-0 end-0 m-3 text-end">
+                    <div class="stars">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                    </div>
+                    <span class="text-muted small">Moderate to Discover</span>
+                </div>
+                <div class="text-center mt-5">
+                    <h5 class="card-title">Persistent feelings of sadness, hopelessness, or emptiness</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
                 <div class="d-flex justify-content-center">
@@ -361,20 +366,30 @@ function pickRandomAffirmation() {
         });
 
         // Sort Functionality
-        document.getElementById('sortSigns').addEventListener('change', event => {
-            const sortValue = event.target.value;
-            const signsList = document.getElementById('signsList');
-            const signs = Array.from(signsList.children);
+document.getElementById('sortSignsDropdown').addEventListener('click', event => {
+    if (event.target.matches('.dropdown-item')) {
+        event.preventDefault();
 
-            signs.sort((a, b) => {
-                const orderA = parseInt(a.getAttribute('data-order'));
-                const orderB = parseInt(b.getAttribute('data-order'));
-                return sortValue === 'easiest' ? orderA - orderB : orderB - orderA;
-            });
+        const sortValue = event.target.getAttribute('data-value');
+        const sortLabel = event.target.textContent;
+        const signsList = document.getElementById('signsList');
+        const signs = Array.from(signsList.children);
 
-            // Reorder the list
-            signs.forEach(sign => signsList.appendChild(sign));
+        // Update the dropdown button label
+        document.getElementById('sortButtonLabel').textContent = sortLabel;
+
+        // Perform sorting
+        signs.sort((a, b) => {
+            const orderA = parseInt(a.getAttribute('data-order'));
+            const orderB = parseInt(b.getAttribute('data-order'));
+            return sortValue === 'easiest' ? orderA - orderB : orderB - orderA;
         });
+
+        // Reorder the list
+        signs.forEach(sign => signsList.appendChild(sign));
+    }
+});
+
     </script>
 
 </body>

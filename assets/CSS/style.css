@@ -387,29 +387,11 @@ a {
 }
 
 /* Star Scale Color Coding */
-.star-scale .easy {
-    color: #28a745;
-    /* Green */
+.card-body .stars {
+    display: inline-flex;
+    align-items: center;
 }
 
-.star-scale .moderate {
-    color: #ffc107;
-    /* Yellow */
-}
-
-.star-scale .very-hard {
-    color: #fd7e14;
-    /* Orange */
-}
-
-.star-scale .hardest {
-    color: #b30d0d;
-    /* Red */
-}
-
-/* Star size adjustments */
-.star-scale i {
-    font-size: 1.5rem;
-    /* Adjust icon size */
-    margin-right: 2px;
+.card-body .stars i {
+    margin-right: 0.1rem;
 }
