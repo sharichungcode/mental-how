@@ -69,479 +69,148 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <div class="container-fluid p-0">
-            <section id="hero" class="bg-dark px-3 pt-4 pb-5 text-white text-center">
-                <!-- Title and Intro -->
-                <div class="col-12">
-                    <h1 id="hero-title" class="display-4 mb-3 font-weight-bold">Begin your mental wellness journey.</h1>
-                    <p class="h6 mb-3" id="hero-prompt">Affirmation for today:</p>
-                </div>
-
-                <!-- Affirmation Card -->
-<div class="col-12">
-    <div class="card mx-auto mb-4 shadow-lg text-dark rounded-2 p-5 align-self-center d-flex justify-content-center align-items-center" 
-         id="affirmation-card" style="max-width: 500px; border-radius: 15px;">
-        <div id="affirmation-card-wrap">
-            <div class="text-center border-0" style="background: transparent;">
-                <div class="mx-auto d-block m-2 mb-3" id="icon" style="width: 32px; height: 32px;"
-                     alt="Affirmation Icon">
-                </div>
-            </div>
-            <div class="text-center p-0">
-                <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                <!-- Action Buttons -->
-                <div class="container px-3 pb-5">
-                <div class="row">
-                    <!-- 'Pick Another' Button (Secondary) -->
-                    <div class="col-12 mb-3">
-                        <button class="btn btn-outline-light btn-lg rounded-2 w-100" onclick="pickRandomAffirmation()"
-                            aria-label="Pick another affirmation">
-                            <i class="fa-solid fa-arrows-rotate"></i> Pick Another
-                        </button>
-                    </div>
-                    </div>
-
-                    <!-- 'Continue' Button (Primary CTA) -->
-                    <div class="col-12">
-                        <a href="#who-needs-help" class="btn btn-primary btn-lg rounded-2 w-100"
-                            aria-label="Who Needs Help Today section">
-                            Seek for mental health help
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-
-        <div class="container-fluid text-bg-light px-3 pb-5">
-            <!-- Section 1: Who Needs Help Today -->
-            <div class="container px-3 pb-5">
-            <section id="who-needs-help" class="text-center pt-5">
-                <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold pt-3">Who Needs Help?</h2>
-                <p id="who-needs-help-description">Choose who needs mental health support:</p>
-                <div
-                    class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm w-100-sm-sm text-bg-light border border-dark">
-                    <!-- Primary Buttons -->
-                    <a href="help-myself.html" class="card-body legend text-decoration-none h2 p-3"
-                        aria-label="Help Myself page">Myself</a>
-                </div>
-                <div
-                    class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm w-100-sm-sm text-bg-light border border-dark">
-                    <a href="help-others.html" class="card-body legend text-decoration-none h2 p-3"
-                        aria-label="Help Someone else page">Someone I Know</a>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <!-- Secondary Button (less obvious) -->
-                    <a href="#signs-of-need" class="text-decoration-none text-dark"
-                        aria-label="Signs Someone Needs Help section">I'm not sure</a>
-                </div>
-            </section>
-            </div>
-        </div>
-
-        <div class="container px-3 pb-5">
-
-            <!-- Section 2: Signs That Someone Might Need Help -->
-            <section id="signs-of-need" class="text-center pt-5">
-                <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-3">Signs That Someone Needs Help
-                </h2>
-                <!-- Sorting and Filtering Controls -->
-                <div class="d-flex flex-column align-items-center mb-4">
-                    <!-- Sort Dropdown -->
-                    <div class="d-flex w-100 align-items-center">
-                        <div class="btn-group flex-fill mb-3">
-                            <button type="button"
-                                class="btn btn-outline-dark d-flex justify-content-between align-items-center rounded-2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span>Sort by: <span id="sortButtonLabel">Easiest to Discover</span></span>
-                                <i class="fa-solid fa-caret-down ms-2"></i>
-                            </button>
-                            <ul class="dropdown-menu" id="sortSignsDropdown">
-                                <li><a class="dropdown-item" href="#" data-value="easiest">Easiest to Discover</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="hardest">Hardest to Discover</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Filter Buttons -->
-                    <div class="btn-group d-flex w-100" role="group" aria-label="Filter signs">
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="all"
-                            aria-label="Show all signs">All</button>
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="emotional"
-                            aria-label="Show emotional signs">Emotional</button>
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="physical"
-                            aria-label="Show physical signs">Physical</button>
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="behavioral"
-                            aria-label="Show behavioral signs">Behavioral</button>
-                    </div>
-
-
-                </div>
-
-                <!-- Signs List -->
-                <div id="signsList" class="row g-3 mb-4">
-                    <!-- Sign Card -->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item emotional" data-order="3">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-face-sad-tear me-2 text-light" style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Emotional</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Feeling overwhelmed, stressed, or anxious most of the time
-                                    </h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Moderate to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item emotional" data-order="5">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-face-sad-tear me-2 text-light" style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Emotional</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">A sudden loss of interest in hobbies or activities once
-                                        enjoyed</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Hardest to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item emotional" data-order="2">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-face-sad-tear me-2 text-light" style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Emotional</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Difficulty concentrating, making decisions, or staying
-                                        focused</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Easier to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item physical" data-order="3">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-bed me-2 text-light" style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Physical</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Significant changes in appetite or weight (eating too much or
-                                        too little)</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Moderate to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item physical" data-order="2">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-bed me-2 text-light" style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Physical</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Physical fatigue or a lack of energy despite resting</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Easier to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item physical" data-order="4">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-bed me-2 text-light" style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Physical</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Frequent complaints of unexplained aches and pains
-                                        (headaches, stomachaches)</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Hardest to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item behavioral" data-order="3">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-person-running me-2 text-light"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Behavioral</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Withdrawing from friends, family, or social activities</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Moderate to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item behavioral" data-order="1">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-person-running me-2 text-light"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Behavioral</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Loss of productivity at work or school</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Easiest to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item behavioral" data-order="4">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-person-running me-2 text-light"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Behavioral</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Increased use of alcohol, drugs, or other risky behaviors
-                                    </h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Hardest to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item behavioral" data-order="3">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-person-running me-2 text-light"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Behavioral</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Avoiding responsibilities or procrastinating excessively</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Moderate to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item behavioral" data-order="2">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-person-running me-2 text-light"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Behavioral</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Unusual changes in speech or tone (e.g., speaking very slowly
-                                        or erratically)</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Easier to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch sign-item behavioral" data-order="1">
-                        <div class="card shadow-sm w-100">
-                            <div class="card-body position-relative py-5">
-                                <!-- Top Left: Icon and Filter Type -->
-                                <div
-                                    class="position-absolute top-0 mt-2 start-0 px-3 py-1 d-flex align-items-center bg-dark rounded-end-5">
-                                    <i class="fa-solid fa-person-running me-2 text-light"
-                                        style="font-size: 1.2rem;"></i>
-                                    <span class="badge">Behavioral</span>
-                                </div>
-                                <!-- Center: Description -->
-                                <div class="text-center mt-4">
-                                    <h5 class="card-title">Exhibiting signs of self-harm, such as unexplained cuts or
-                                        bruises</h5>
-                                </div>
-                                <!-- Bottom Right: Scale -->
-                                <div class="position-absolute bottom-0 end-0 m-3 text-end">
-                                    <span class="text-muted small">Easiest to Discover</span>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-                <div class="d-flex justify-content-center d-flex">
-                    <a href="help-myself.html" class="btn btn-primary btn-lg me-2 flex-fill rounded-2"
-                        aria-label="Help Myself page">Help
-                        Myself</a>
-                    <a href="help-others.html" class="btn btn-primary btn-lg ms-2 flex-fill rounded-2"
-                        aria-label="Help Someone else page">Help
-                        Someone
-                        I Know</a>
-                </div>
-            </section>
-
-
-        </div>
-
-        <!-- Emergency Help Section -->
-        <div class="container-fluid px-0">
-        <section class="bg-dark text-white py-5 z-1" id="emergency">
+        <section id="hero" class="py-5 bg-secondary text-white text-center">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <h2 class="display-5 fw-bold">Need Immediate Mental Health Support?</h2>
-                        <p class="lead">
-                            If you or someone you know is in crisis, don't wait. We have resources and contacts
-                            available to provide urgent help.
-                        </p>
+                <h1 class="display-4 fw-bold">Help Others on Their Mental Wellness Journey</h1>
+                <p class="lead mb-4">Learn how to support the people in your life with understanding, empathy, and actionable steps.</p>
+            </div>
+        </section>
+    
+        <!-- Recognizing the Signs Section -->
+        <section id="recognizing-signs" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="fw-bold text-center mb-5">Recognizing the Signs</h2>
+                <div class="row g-4 d-flex">
+                    <!-- Sign 1 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-face-frown fa-3x text-warning mb-3"></i>
+                                <h5 class="card-title">Changes in Behavior</h5>
+                                <p class="text-muted">
+                                    Look for noticeable changes such as withdrawal from social activities, loss of interest in hobbies, or increased irritability.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4 text-md-end text-center">
-                        <a href="emergency-contacts.html" class="btn btn-danger btn-lg rounded-2 w-100">Get Emergency
-                            Contacts</a>
+                    <!-- Sign 2 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-bed fa-3x text-info mb-3"></i>
+                                <h5 class="card-title">Physical Symptoms</h5>
+                                <p class="text-muted">
+                                    Be aware of complaints such as persistent fatigue, frequent headaches, or noticeable weight changes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sign 3 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-comment-dots fa-3x text-success mb-3"></i>
+                                <h5 class="card-title">Unusual Statements</h5>
+                                <p class="text-muted">
+                                    Pay attention to expressions of hopelessness, feelings of worthlessness, or talk of being a burden.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        </div>
-
+    
+        <!-- How to Offer Support Section -->
+        <section id="offer-support" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="fw-bold text-center mb-5">How to Offer Support</h2>
+                <div class="row g-4 d-flex">
+                    <!-- Support Tip 1 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Listen Without Judgment</h5>
+                                <p class="text-muted">
+                                    Be an active and empathetic listener. Allow them to express their feelings without fear of criticism or dismissal.
+                                </p>
+                                <ul class="text-muted">
+                                    <li>Maintain eye contact to show you’re present.</li>
+                                    <li>Avoid interrupting or offering solutions too quickly.</li>
+                                    <li>Use phrases like, "I’m here for you," or "I hear you."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Support Tip 2 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Encourage Professional Help</h5>
+                                <p class="text-muted">
+                                    Gently suggest reaching out to a therapist, counselor, or doctor for professional guidance. Provide reassurance that seeking help is a sign of strength.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Support Tip 3 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Stay Patient and Supportive</h5>
+                                <p class="text-muted">
+                                    Recovery takes time. Be patient, and continue showing your support, even if progress seems slow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Practical Actions Section -->
+        <section id="practical-actions" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="fw-bold text-center mb-5">Practical Actions You Can Take</h2>
+                <div class="row g-4 d-flex">
+                    <!-- Action 1 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Check In Regularly</h5>
+                                <p class="text-muted">
+                                    Send a quick message or make a call to ask how they’re doing. Consistent check-ins show that you care.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action 2 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Offer Help with Tasks</h5>
+                                <p class="text-muted">
+                                    Help them manage everyday tasks like cooking, cleaning, or running errands, especially during tough times.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action 3 -->
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Learn About Mental Health</h5>
+                                <p class="text-muted">
+                                    Educate yourself about mental health conditions to better understand what your loved one may be experiencing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-3">
