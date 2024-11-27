@@ -359,6 +359,13 @@ a {
     /* Ensures it's on top of other content */
 }
 
+.nav-link.active {
+    background-color: #f8f9fa; /* Light background */
+    color: var(--bs-primary) !important;           /* Primary color */
+    border-bottom: var(--bs-primary) solid 3px;
+}
+
+
 /* Hero Section */
 #hero {
     background-image: url('../images/bg_hero.jpg');
