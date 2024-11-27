@@ -341,6 +341,12 @@ a {
     font-size: 1rem;
     font-weight: 700;
 }
+.btn-primary:hover {
+    color: var(---bs-dark);
+    background-color: var(--bs-dark);
+    border-color: var(--bs-dark);
+    color: var(--bs-light);
+}
 
 .hidden {
     visibility: hidden;
