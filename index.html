@@ -77,19 +77,22 @@
                 </div>
 
                 <!-- Affirmation Card -->
-                <div class="col-12">
-                    <div class="card mx-auto mb-4 shadow-lg text-dark rounded-2 p-5 align-self-center"
-                        id="affirmation-card" style="max-width: 500px; border-radius: 15px;">
-                        <div class="text-center border-0" style="background: transparent;">
-                            <div class="mx-auto d-block m-2 mb-3" id="icon" style="width: 32px; height: 32px;"
-                                alt="Affirmation Icon">
-                            </div>
-                        </div>
-                        <div class="text-center p-0">
-                            <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
-                        </div>
-                    </div>
+<div class="col-12">
+    <div class="card mx-auto mb-4 shadow-lg text-dark rounded-2 p-5 align-self-center d-flex justify-content-center align-items-center" 
+         id="affirmation-card" style="max-width: 500px; border-radius: 15px;">
+        <div id="affirmation-card-wrap">
+            <div class="text-center border-0" style="background: transparent;">
+                <div class="mx-auto d-block m-2 mb-3" id="icon" style="width: 32px; height: 32px;"
+                     alt="Affirmation Icon">
                 </div>
+            </div>
+            <div class="text-center p-0">
+                <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                 <!-- Action Buttons -->
                 <div class="container px-3 pb-5">
@@ -518,7 +521,7 @@
 
         <!-- Emergency Help Section -->
         <div class="container-fluid px-0">
-        <section class="bg-danger text-white py-5" id="emergency">
+        <section class="bg-dark text-white py-5 z-1" id="emergency">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-8">
@@ -529,7 +532,7 @@
                         </p>
                     </div>
                     <div class="col-md-4 text-md-end text-center">
-                        <a href="emergency-contacts.html" class="btn btn-primary btn-lg rounded-2 w-100">Get Emergency
+                        <a href="emergency-contacts.html" class="btn btn-danger btn-lg rounded-2 w-100">Get Emergency
                             Contacts</a>
                     </div>
                 </div>
