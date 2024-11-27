@@ -45,14 +45,14 @@
         <div class="navbar-collapse collapse order-4" id="navbarNav">
             <!-- Navbar Items -->
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item ps-3">
+                <li class="nav-item ps-3 mb-3 mb-md-0">
                     <a class="nav-link ps-3 py-3 active" href="index.html" aria-label="Homepage">Home</a>
                 </li>
-                <li class="nav-item ps-3">
+                <li class="nav-item ps-3 mb-3 mb-md-0">
                     <a class="nav-link ps-3 py-3" href="help-myself.html" aria-label="Help Myself page">Help
                         Myself</a>
                 </li>
-                <li class="nav-item ps-3 mb-3 mb-md-0">
+                <li class="nav-item ps-3 mb-3 mb-md-0 ">
                     <a class="nav-link ps-3 py-3" href="help-others.html" aria-label="Help Others page">Help
                         Others</a>
                 </li>
@@ -69,54 +69,50 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <div class="container-fluid p-0">
-            <section id="hero" class="bg-dark px-3 pt-4 pb-5 text-white text-center">
-                <!-- Title and Intro -->
-                <div class="col-12">
-                    <h1 id="hero-title" class="display-4 mb-3 font-weight-bold">Begin your mental wellness journey.</h1>
-                    <p class="h6 mb-3" id="hero-prompt">Affirmation for today:</p>
-                </div>
+<div class="container-fluid p-0">
+    <section id="hero" class="bg-dark px-3 pt-4 pb-5 text-white text-center">
+        <!-- Title and Intro -->
+        <div class="col-12">
+            <h1 id="hero-title" class="display-4 mb-3 font-weight-bold">Begin your mental wellness journey.</h1>
+            <p class="h6 mb-3" id="hero-prompt">Affirmation for today:</p>
+        </div>
 
-                <!-- Affirmation Card -->
-<div class="col-12">
-    <div class="card mx-auto mb-4 shadow-lg text-dark rounded-2 p-5 align-self-center d-flex justify-content-center align-items-center" 
-         id="affirmation-card" style="max-width: 500px; border-radius: 15px;">
-        <div id="affirmation-card-wrap">
-            <div class="text-center border-0" style="background: transparent;">
-                <div class="mx-auto d-block m-2 mb-3" id="icon" style="width: 32px; height: 32px;"
-                     alt="Affirmation Icon">
+        <!-- Affirmation Card -->
+        <div class="col-12">
+            <div class="card mx-auto mb-4 shadow-lg text-dark rounded-2 p-5 align-self-center d-flex justify-content-center align-items-center" 
+                 id="affirmation-card" style="max-width: 500px; border-radius: 15px;">
+                <div id="affirmation-card-wrap">
+                    <div class="text-center border-0" style="background: transparent;">
+                        <div class="mx-auto d-block m-2 mb-3" id="icon" style="width: 32px; height: 32px;" alt="Affirmation Icon"></div>
+                    </div>
+                    <div class="text-center p-0">
+                        <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center p-0">
-                <p class="h4 font-weight-bold text-dark" id="affirmation">Loading an affirmation...</p>
             </div>
         </div>
-    </div>
+
+        <!-- Action Buttons -->
+        <div class="container px-3 pb-5">
+            <div class="row justify-content-center">
+                <!-- 'Pick Another' Button (Secondary) -->
+                <div class="col-12 col-md-auto mb-3">
+                    <button class="btn btn-outline-light btn-lg rounded-2 w-100 w-md-auto" onclick="pickRandomAffirmation()" aria-label="Pick another affirmation">
+                        <i class="fa-solid fa-arrows-rotate"></i> Pick Another
+                    </button>
+                </div>
+
+                <!-- 'Continue' Button (Primary CTA) -->
+                <div class="col-12 col-md-auto">
+                    <a href="#who-needs-help" class="btn btn-primary btn-lg rounded-2 w-100 w-md-auto" aria-label="Who Needs Help Today section">
+                        Seek for mental health help
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
-
-                <!-- Action Buttons -->
-                <div class="container px-3 pb-5">
-                <div class="row">
-                    <!-- 'Pick Another' Button (Secondary) -->
-                    <div class="col-12 mb-3">
-                        <button class="btn btn-outline-light btn-lg rounded-2 w-100" onclick="pickRandomAffirmation()"
-                            aria-label="Pick another affirmation">
-                            <i class="fa-solid fa-arrows-rotate"></i> Pick Another
-                        </button>
-                    </div>
-                    </div>
-
-                    <!-- 'Continue' Button (Primary CTA) -->
-                    <div class="col-12">
-                        <a href="#who-needs-help" class="btn btn-primary btn-lg rounded-2 w-100"
-                            aria-label="Who Needs Help Today section">
-                            Seek for mental health help
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
 
 
         <div class="container-fluid text-bg-light px-3 pb-5">
@@ -125,21 +121,22 @@
             <section id="who-needs-help" class="text-center pt-5">
                 <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold pt-3">Who Needs Help?</h2>
                 <p id="who-needs-help-description">Choose who needs mental health support:</p>
-                <div
-                    class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm w-100-sm-sm text-bg-light border border-dark">
-                    <!-- Primary Buttons -->
-                    <a href="help-myself.html" class="card-body legend text-decoration-none h2 p-3"
-                        aria-label="Help Myself page">Myself</a>
+                <div class="row justify-content-center">
+                    <!-- 'Myself' Button (Primary) -->
+                    <div class="col-12 col-md-5 mb-3">
+                        <a href="help-myself.html" class="card-body legend text-decoration-none h2 p-3 d-block text-center shadow-sm border border-dark text-bg-light rounded-2"
+                           aria-label="Help Myself page">Myself</a>
+                    </div>
+                    <!-- 'Someone I Know' Button (Primary) -->
+                    <div class="col-12 col-md-5 mb-3">
+                        <a href="help-others.html" class="card-body legend text-decoration-none h2 p-3 d-block text-center shadow-sm border border-dark text-bg-light rounded-2"
+                           aria-label="Help Someone else page">Someone I Know</a>
+                    </div>
                 </div>
-                <div
-                    class="d-flex justify-content-center flex-wrap mb-3 card shadow-sm w-100-sm-sm text-bg-light border border-dark">
-                    <a href="help-others.html" class="card-body legend text-decoration-none h2 p-3"
-                        aria-label="Help Someone else page">Someone I Know</a>
-                </div>
+        
+                <!-- Secondary Button (less obvious) -->
                 <div class="d-flex justify-content-center">
-                    <!-- Secondary Button (less obvious) -->
-                    <a href="#signs-of-need" class="text-decoration-none text-dark"
-                        aria-label="Signs Someone Needs Help section">I'm not sure</a>
+                    <a href="#signs-of-need" class="text-decoration-none text-dark" aria-label="Signs Someone Needs Help section">I'm not sure</a>
                 </div>
             </section>
             </div>
@@ -152,39 +149,36 @@
                 <h2 id="signs-of-need-title" class="display-4 mb-3 font-weight-bold pt-3">Signs That Someone Needs Help
                 </h2>
                 <!-- Sorting and Filtering Controls -->
-                <div class="d-flex flex-column align-items-center mb-4">
-                    <!-- Sort Dropdown -->
-                    <div class="d-flex w-100 align-items-center">
-                        <div class="btn-group flex-fill mb-3">
-                            <button type="button"
-                                class="btn btn-outline-dark d-flex justify-content-between align-items-center rounded-2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span>Sort by: <span id="sortButtonLabel">Easiest to Discover</span></span>
-                                <i class="fa-solid fa-caret-down ms-2"></i>
-                            </button>
-                            <ul class="dropdown-menu" id="sortSignsDropdown">
-                                <li><a class="dropdown-item" href="#" data-value="easiest">Easiest to Discover</a></li>
-                                <li><a class="dropdown-item" href="#" data-value="hardest">Hardest to Discover</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<div class="container px-3 mb-4">
+    <div class="row d-flex justify-content-center">
+        <!-- Sorting Controls -->
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0 p-0 pe-md-3">
+            <div class="btn-group w-100">
+                <button type="button"
+                        class="btn btn-outline-dark d-flex justify-content-between align-items-center rounded-2 w-100"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>Sort by: <span id="sortButtonLabel">Easiest to Discover</span></span>
+                    <i class="fa-solid fa-caret-down ms-2"></i>
+                </button>
+                <ul class="dropdown-menu" id="sortSignsDropdown">
+                    <li><a class="dropdown-item" href="#" data-value="easiest">Easiest to Discover</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="hardest">Hardest to Discover</a></li>
+                </ul>
+            </div>
+        </div>
 
+        <!-- Filter Controls (on the right on larger screens) -->
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end p-0">
+            <div class="btn-group w-100">
+                <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="all" aria-label="Show all signs">All</button>
+                <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="emotional" aria-label="Show emotional signs">Emotional</button>
+                <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="physical" aria-label="Show physical signs">Physical</button>
+                <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="behavioral" aria-label="Show behavioral signs">Behavioral</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-                    <!-- Filter Buttons -->
-                    <div class="btn-group d-flex w-100" role="group" aria-label="Filter signs">
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="all"
-                            aria-label="Show all signs">All</button>
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="emotional"
-                            aria-label="Show emotional signs">Emotional</button>
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="physical"
-                            aria-label="Show physical signs">Physical</button>
-                        <button class="btn btn-outline-primary filter-btn flex-fill" data-filter="behavioral"
-                            aria-label="Show behavioral signs">Behavioral</button>
-                    </div>
-
-
-                </div>
 
                 <!-- Signs List -->
                 <div id="signsList" class="row g-3 mb-4">
