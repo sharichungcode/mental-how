@@ -92,6 +92,7 @@
                 </div>
 
                 <!-- Action Buttons -->
+                <div class="container px-3 pb-5">
                 <div class="row">
                     <!-- 'Pick Another' Button (Secondary) -->
                     <div class="col-12 mb-3">
@@ -99,6 +100,7 @@
                             aria-label="Pick another affirmation">
                             <i class="fa-solid fa-arrows-rotate"></i> Pick Another
                         </button>
+                    </div>
                     </div>
 
                     <!-- 'Continue' Button (Primary CTA) -->
@@ -115,6 +117,7 @@
 
         <div class="container-fluid text-bg-light px-3 pb-5">
             <!-- Section 1: Who Needs Help Today -->
+            <div class="container px-3 pb-5">
             <section id="who-needs-help" class="text-center pt-5">
                 <h2 id="who-needs-help-title" class="display-4 mb-3 font-weight-bold pt-3">Who Needs Help?</h2>
                 <p id="who-needs-help-description">Choose who needs mental health support:</p>
@@ -135,6 +138,7 @@
                         aria-label="Signs Someone Needs Help section">I'm not sure</a>
                 </div>
             </section>
+            </div>
         </div>
 
         <div class="container px-3 pb-5">
@@ -499,10 +503,10 @@
 
 
                 <div class="d-flex justify-content-center d-flex">
-                    <a href="help-myself.html" class="btn btn-primary btn-lg me-2 flex-fill"
+                    <a href="help-myself.html" class="btn btn-primary btn-lg me-2 flex-fill rounded-2"
                         aria-label="Help Myself page">Help
                         Myself</a>
-                    <a href="help-others.html" class="btn btn-primary btn-lg ms-2 flex-fill"
+                    <a href="help-others.html" class="btn btn-primary btn-lg ms-2 flex-fill rounded-2"
                         aria-label="Help Someone else page">Help
                         Someone
                         I Know</a>
@@ -513,7 +517,8 @@
         </div>
 
         <!-- Emergency Help Section -->
-        <section class="bg-danger text-white py-5">
+        <div class="container-fluid px-0">
+        <section class="bg-danger text-white py-5" id="emergency">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-8">
@@ -524,19 +529,20 @@
                         </p>
                     </div>
                     <div class="col-md-4 text-md-end text-center">
-                        <a href="emergency-contacts.html" class="btn btn-light btn-lg fw-bold">Get Emergency
+                        <a href="emergency-contacts.html" class="btn btn-primary btn-lg rounded-2 w-100">Get Emergency
                             Contacts</a>
                     </div>
                 </div>
             </div>
         </section>
+        </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-light py-3">
+    <footer class="bg-dark text-light py-3">
         <div class="container text-center">
-            <p>© 2024 Mental How | Designed with <i class="fa-solid fa-heart text-danger"></i> for mental well-being
+            <p>© 2024 Mental How | Designed by Shari Chung
             </p>
         </div>
     </footer>

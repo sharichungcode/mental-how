@@ -386,8 +386,10 @@ a {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 257px;
-    /* All cards will have the same height */
+    aspect-ratio: 1.4 / 1; /* Adjust the ratio as needed */
+    width: 100%;         /* Takes full width of its container */
+    max-width: 500px;    /* Restrict the maximum size on larger devices */
+    border-radius: 6px;
 
 }
 
@@ -409,4 +411,12 @@ a {
 
 .card-body .stars i {
     margin-right: 0.1rem;
+}
+
+/* Emergency Section */
+#emergency {
+    background-image: url('../images/bg_urgent.jpg');
+    background-size: cover;
+    background-position: left;
+    position: relative;
 }
