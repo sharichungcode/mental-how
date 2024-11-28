@@ -3,7 +3,7 @@
 ![Responsivity Example](assets/images/Mental%20How%20Screenshot.png)
 
 ## Live Site
-[Visit the Live Site](https://your-live-site-link-here.com)
+[Visit the Live Site](https://sharichungcode.github.io/mental-how/)
 
 ---
 
