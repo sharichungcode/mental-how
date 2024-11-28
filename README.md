@@ -1,6 +1,6 @@
 # Mental How
 
-![Responsivity Example](URL_of_image)
+![Responsivity Example](assets/images/Mental How Screenshot.png)
 
 ## Live Site
 [Visit the Live Site](https://your-live-site-link-here.com)
